@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	initializeViewportAnimations();
 	initializePolicyPage();
 	initializeScrollIndicator();
+	initializeAppImageFallbacks();
 });
 
 // Loading Screen Animation
@@ -1156,4 +1157,143 @@ function initializeScrollIndicator() {
     window.addEventListener('scroll', requestScrollUpdate);
     
     console.log('✅ Scroll indicator initialized');
+}
+
+// App Image Fallback System
+function initializeAppImageFallbacks() {
+    console.log('🖼️ Initializing app image fallbacks...');
+    
+    const appImages = document.querySelectorAll('.app-image img');
+    
+    // App icon configurations for fallbacks
+    const appConfigs = {
+        'fitness tracker': {
+            initials: 'FT',
+            gradient: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
+            bgColor: '#10b981'
+        },
+        'habit tracker': {
+            initials: 'HB',
+            gradient: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)',
+            bgColor: '#f59e0b'
+        },
+        '2048': {
+            initials: '20',
+            gradient: 'linear-gradient(135deg, #6366f1 0%, #4f46e5 100%)',
+            bgColor: '#6366f1'
+        },
+        'Brain Puzzle Quest': {
+            initials: 'BP',
+            gradient: 'linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)',
+            bgColor: '#8b5cf6'
+        },
+        'slidingPuzzle': {
+            initials: 'SP',
+            gradient: 'linear-gradient(135deg, #06b6d4 0%, #0891b2 100%)',
+            bgColor: '#06b6d4'
+        },
+        'sudoku': {
+            initials: 'SU',
+            gradient: 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)',
+            bgColor: '#ef4444'
+        },
+        'bombhunt': {
+            initials: 'BH',
+            gradient: 'linear-gradient(135deg, #f97316 0%, #ea580c 100%)',
+            bgColor: '#f97316'
+        },
+        'mystudentApp': {
+            initials: 'MS',
+            gradient: 'linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)',
+            bgColor: '#3b82f6'
+        }
+    };
+    
+    appImages.forEach(img => {
+        // Add loading state
+        img.style.transition = 'opacity 0.3s ease';
+        
+        // Handle successful load
+        img.addEventListener('load', function() {
+            this.style.opacity = '1';
+            console.log(`✅ Successfully loaded: ${this.src}`);
+        });
+        
+        // Create fallback for missing or broken images
+        img.addEventListener('error', function() {
+            console.warn(`❌ Failed to load image: ${this.src}`);
+            createFallbackIcon(this);
+        });
+        
+        // Check if image loads successfully for existing images
+        if (img.complete && img.naturalHeight === 0) {
+            createFallbackIcon(img);
+        }
+    });
+    
+    function createFallbackIcon(img) {
+        const src = img.src;
+        let appName = '';
+        let config = null;
+        
+        // Determine app type from src
+        for (const [key, value] of Object.entries(appConfigs)) {
+            if (src.includes(key)) {
+                appName = key;
+                config = value;
+                break;
+            }
+        }
+        
+        if (!config) {
+            // Default fallback for unknown apps
+            const alt = img.alt || 'App';
+            const words = alt.split(' ');
+            const initials = words.length > 1 
+                ? words[0][0] + words[1][0] 
+                : alt.substring(0, 2);
+            
+            config = {
+                initials: initials.toUpperCase(),
+                gradient: 'linear-gradient(135deg, #6366f1 0%, #4f46e5 100%)',
+                bgColor: '#6366f1'
+            };
+        }
+        
+        // Create SVG fallback icon
+        const fallbackSvg = `
+            <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="gradient-${Date.now()}" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:${config.bgColor};stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:${config.bgColor}CC;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <rect width="200" height="200" rx="40" ry="40" fill="url(#gradient-${Date.now()})" />
+                <text x="100" y="120" font-family="Inter, sans-serif" font-size="48" font-weight="600" 
+                      text-anchor="middle" fill="white" dominant-baseline="middle">
+                    ${config.initials}
+                </text>
+            </svg>
+        `;
+        
+        // Convert SVG to data URL
+        const svgBlob = new Blob([fallbackSvg], { type: 'image/svg+xml' });
+        const svgUrl = URL.createObjectURL(svgBlob);
+        
+        // Replace the broken image
+        img.src = svgUrl;
+        img.style.background = config.gradient;
+        img.style.borderRadius = '1rem';
+        img.style.opacity = '1';
+        
+        // Clean up the blob URL after a delay
+        setTimeout(() => {
+            URL.revokeObjectURL(svgUrl);
+        }, 1000);
+        
+        console.log(`✅ Created fallback icon for ${appName || img.alt}`);
+    }
+    
+    console.log('✅ App image fallbacks initialized');
 }
