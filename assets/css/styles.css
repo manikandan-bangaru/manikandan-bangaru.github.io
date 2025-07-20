@@ -88,6 +88,12 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    /* Mobile scroll optimization */
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    touch-action: manipulation;
+    /* Prevent scroll anchoring issues */
+    overflow-anchor: none;
 }
 
 body {
@@ -98,6 +104,13 @@ body {
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    /* Mobile scrolling optimizations */
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 /* Loading Screen */
@@ -151,6 +164,9 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--space-md);
+    /* Smooth scrolling optimization */
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
 }
 
 .glass-card {
@@ -650,6 +666,9 @@ body {
 .about-section {
     padding: var(--space-3xl) 0;
     background: var(--bg-secondary);
+    /* Prevent mobile auto-scroll issues */
+    overflow: visible;
+    position: relative;
 }
 
 .about-content {
@@ -816,6 +835,15 @@ body {
     position: relative;
     min-height: 400px; /* Prevent layout shift during filtering */
     transition: all 0.3s ease;
+}
+
+/* Prevent interaction during filtering to avoid conflicts */
+.apps-grid.filtering {
+    pointer-events: none;
+}
+
+.apps-grid.filtering .app-card {
+    pointer-events: none;
 }
 
 .app-card {
@@ -1200,6 +1228,30 @@ body {
 }
 
 @media (max-width: 768px) {
+    /* Mobile-specific performance optimizations */
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    body {
+        /* Improve mobile scrolling performance */
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+        transform: translate3d(0, 0, 0);
+        -webkit-transform: translate3d(0, 0, 0);
+        /* Prevent auto-scroll anchoring issues */
+        overflow-anchor: none;
+        scroll-snap-type: none;
+    }
+    
+    /* Prevent auto-scrolling issues in sections */
+    .about-section,
+    .apps-section,
+    .section {
+        scroll-snap-type: none;
+        -webkit-scroll-snap-type: none;
+    }
+    
     .nav-menu {
         position: absolute;
         top: 100%;
@@ -1291,11 +1343,35 @@ body {
     .apps-grid {
         grid-template-columns: 1fr;
         gap: var(--space-lg);
+        /* Mobile scroll optimization */
+        contain: layout style paint;
     }
     
     .app-card {
         margin: 0;
         max-width: 100%;
+        /* Reduce animation complexity on mobile */
+        will-change: auto;
+    }
+    
+    .app-card:hover {
+        /* Simplify hover effects on mobile for better performance */
+        transform: translateY(-5px) translateZ(0);
+    }
+    
+    /* Fix about section scroll behavior on mobile */
+    .about-section {
+        scroll-margin-top: 80px;
+        position: relative;
+        overflow: visible;
+    }
+    
+    .about-content {
+        scroll-behavior: auto; /* Disable smooth scroll in content areas */
+    }
+    
+    .about-stats {
+        scroll-margin-bottom: 100px; /* Ensure stats are visible */
     }
     
     .hero-content {

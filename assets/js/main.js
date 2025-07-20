@@ -126,8 +126,16 @@ function initializeScrollEffects() {
 	}
 }
 
-// App Category Filter System
+// App Category Filter System - Enhanced with flicker prevention
+let filterInitialized = false;
+
 function initializeAppFilter() {
+	// Prevent multiple initializations
+	if (filterInitialized) {
+		console.log('🔄 Filter already initialized, skipping...');
+		return;
+	}
+	
 	console.log('🎯 Initializing App Filter System...');
 	
 	// Use a more robust selector approach
@@ -184,12 +192,15 @@ function initializeAppFilter() {
 		const clickedBtn = e.currentTarget;
 		const category = clickedBtn.getAttribute('data-category');
 		
-		// Prevent rapid clicking
-		if (clickedBtn.disabled || clickedBtn.classList.contains('filtering')) {
+		// Prevent rapid clicking and multiple filter operations
+		if (clickedBtn.disabled || clickedBtn.classList.contains('filtering') || appsGrid.classList.contains('filtering')) {
 			return;
 		}
 		
 		console.log('🖱️ Filter button clicked:', category);
+		
+		// Mark grid as filtering to prevent overlapping operations
+		appsGrid.classList.add('filtering');
 		
 		// Disable all buttons temporarily to prevent rapid clicks
 		filterBtns.forEach(btn => {
@@ -215,6 +226,7 @@ function initializeAppFilter() {
 				btn.classList.remove('filtering');
 				btn.style.pointerEvents = '';
 			});
+			appsGrid.classList.remove('filtering');
 		}, 600); // Wait for animations to complete
 	}
 	
@@ -234,6 +246,8 @@ function initializeAppFilter() {
 		});
 	});
 	
+	// Mark as initialized
+	filterInitialized = true;
 	console.log('✅ App filter initialization complete!');
 	
 	// Test if the filter is working immediately
@@ -358,9 +372,11 @@ function initializeCounterAnimation() {
 
 // Intersection Observer for Scroll Animations
 function initializeIntersectionObserver() {
+	// Use different options for mobile vs desktop
+	const isMobile = window.innerWidth <= 768;
 	const observerOptions = {
-		threshold: 0.1,
-		rootMargin: '0px 0px -50px 0px'
+		threshold: isMobile ? 0.05 : 0.1, // Less aggressive on mobile
+		rootMargin: isMobile ? '0px 0px -20px 0px' : '0px 0px -50px 0px' // Smaller margin on mobile
 	};
 	
 	const observer = new IntersectionObserver((entries) => {
@@ -395,12 +411,23 @@ function initializeSmoothScrolling() {
 			const target = document.querySelector(this.getAttribute('href'));
 			
 			if (target) {
-				const offsetTop = target.offsetTop - 80; // Account for fixed navbar
+				const isMobile = window.innerWidth <= 768;
+				const offsetTop = target.offsetTop - (isMobile ? 100 : 80); // More space on mobile
 				
-				window.scrollTo({
-					top: offsetTop,
-					behavior: 'smooth'
-				});
+				// Use different scroll behavior for mobile
+				if (isMobile) {
+					// Gentler scroll on mobile to prevent overshooting
+					target.scrollIntoView({
+						behavior: 'smooth',
+						block: 'start',
+						inline: 'nearest'
+					});
+				} else {
+					window.scrollTo({
+						top: offsetTop,
+						behavior: 'smooth'
+					});
+				}
 			}
 		});
 	});
@@ -410,11 +437,22 @@ function initializeSmoothScrolling() {
 function scrollToSection(sectionId) {
 	const section = document.getElementById(sectionId);
 	if (section) {
-		const offsetTop = section.offsetTop - 80;
-		window.scrollTo({
-			top: offsetTop,
-			behavior: 'smooth'
-		});
+		const isMobile = window.innerWidth <= 768;
+		
+		if (isMobile) {
+			// Gentler scroll on mobile
+			section.scrollIntoView({
+				behavior: 'smooth',
+				block: 'start',
+				inline: 'nearest'
+			});
+		} else {
+			const offsetTop = section.offsetTop - 80;
+			window.scrollTo({
+				top: offsetTop,
+				behavior: 'smooth'
+			});
+		}
 	}
 }
 
@@ -951,27 +989,21 @@ document.querySelectorAll('section[id]').forEach(section => {
 window.addEventListener('load', function() {
 	// Double-check filter initialization after page fully loads
 	setTimeout(() => {
-		const filterBtns = document.querySelectorAll('.filter-btn');
-		const appCards = document.querySelectorAll('.app-card');
-		
-		console.log('🔄 Backup filter check: Found', filterBtns.length, 'buttons,', appCards.length, 'cards');
-		
-		if (filterBtns.length > 0 && appCards.length > 0) {
-			// Check if listeners are working by testing the first button
-			const firstBtn = filterBtns[0];
-			if (!firstBtn.hasAttribute('data-filter-initialized')) {
-				console.log('🔧 Re-initializing app filter as backup');
+		// Only run backup if not already initialized
+		if (!filterInitialized) {
+			const filterBtns = document.querySelectorAll('.filter-btn');
+			const appCards = document.querySelectorAll('.app-card');
+			
+			console.log('🔄 Backup filter check: Found', filterBtns.length, 'buttons,', appCards.length, 'cards');
+			
+			if (filterBtns.length > 0 && appCards.length > 0) {
+				console.log('🔧 Running backup filter initialization');
 				initializeAppFilter();
-				
-				// Mark as initialized
-				filterBtns.forEach(btn => {
-					btn.setAttribute('data-filter-initialized', 'true');
-				});
 			} else {
-				console.log('✅ Filter already initialized, skipping backup');
+				console.warn('⚠️ Backup check: Missing filter elements');
 			}
 		} else {
-			console.warn('⚠️ Backup check: Missing filter elements');
+			console.log('✅ Filter already initialized, skipping backup');
 		}
 	}, 500);
 });
