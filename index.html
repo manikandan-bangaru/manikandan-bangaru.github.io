@@ -8,7 +8,7 @@
     <meta http-equiv="Expires" content="0">
     <title>Magiban Technologies Pvt Ltd</title>
     <!-- Modern CSS file -->
-    <link rel="stylesheet" href="assets/css/styles.css?v=2025.1">
+    <link rel="stylesheet" href="./assets/css/styles.css?v=2025.3">
     <!-- Critical CSS inline fallback -->
     <style>
         /* Critical CSS for immediate rendering */
@@ -542,5 +542,57 @@
 
     <!-- Scripts -->
     <script src="assets/js/main.js"></script>
+    <!-- CSS Fallback Detection -->
+    <script>
+        // Detect if external CSS loaded
+        function checkCSSLoaded() {
+            console.log('Checking if CSS loaded...');
+            
+            // Method 1: Check for custom properties
+            const root = document.documentElement;
+            const primaryColor = getComputedStyle(root).getPropertyValue('--primary-color').trim();
+            
+            if (primaryColor) {
+                console.log('✅ CSS loaded successfully! Primary color:', primaryColor);
+            } else {
+                console.warn('❌ External CSS failed to load, checking stylesheet links...');
+                
+                // Check all stylesheets
+                const links = document.querySelectorAll('link[rel="stylesheet"]');
+                links.forEach((link, index) => {
+                    console.log(`Stylesheet ${index + 1}:`, link.href);
+                    
+                    // Try to detect if stylesheet loaded
+                    try {
+                        if (link.sheet && link.sheet.cssRules) {
+                            console.log(`✅ Stylesheet ${index + 1} loaded:`, link.sheet.cssRules.length, 'rules');
+                        } else {
+                            console.warn(`❌ Stylesheet ${index + 1} failed to load or access blocked`);
+                        }
+                    } catch (e) {
+                        console.warn(`❌ Error accessing stylesheet ${index + 1}:`, e.message);
+                    }
+                });
+                
+                // Load fallback
+                loadFallbackCSS();
+            }
+        }
+        
+        function loadFallbackCSS() {
+            console.log('Loading fallback CSS...');
+            const fallbackCSS = document.createElement('link');
+            fallbackCSS.rel = 'stylesheet';
+            fallbackCSS.href = './assets/css/main.css'; // Fallback to main CSS
+            fallbackCSS.onload = () => console.log('✅ Fallback CSS loaded');
+            fallbackCSS.onerror = () => console.error('❌ Fallback CSS failed to load');
+            document.head.appendChild(fallbackCSS);
+        }
+        
+        // Check CSS after DOM loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(checkCSSLoaded, 100); // Small delay to ensure CSS has time to load
+        });
+    </script>
 </body>
 </html>
