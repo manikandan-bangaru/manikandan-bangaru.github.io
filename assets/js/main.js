@@ -253,35 +253,21 @@ function filterAppCards(category, appCards) {
 	console.log('🔄 Filtering apps for category:', category);
 	
 	let visibleCount = 0;
-	let hideDelay = 0;
-	let showDelay = 0;
 	
-	// First pass: hide cards that should be hidden
-	appCards.forEach((card) => {
+	// Single pass: update all cards simultaneously
+	appCards.forEach((card, index) => {
 		const cardCategory = card.getAttribute('data-category');
 		const shouldShow = category === 'all' || cardCategory === category;
 		
-		if (!shouldShow && card.style.display !== 'none') {
+		if (shouldShow) {
+			showAppCard(card, index * 30); // Stagger show animations
+			visibleCount++;
+		} else {
 			hideAppCard(card);
-			hideDelay += 20; // Stagger hide animations slightly
 		}
 	});
 	
-	// Second pass: show cards that should be visible (after a short delay)
-	setTimeout(() => {
-		appCards.forEach((card) => {
-			const cardCategory = card.getAttribute('data-category');
-			const shouldShow = category === 'all' || cardCategory === category;
-			
-			if (shouldShow) {
-				showAppCard(card, showDelay);
-				showDelay += 50; // Stagger show animations
-				visibleCount++;
-			}
-		});
-		
-		console.log(`👁️ Showing ${visibleCount} of ${appCards.length} apps`);
-	}, 100); // Small delay to let hide animations start
+	console.log(`👁️ Showing ${visibleCount} of ${appCards.length} apps`);
 }
 
 // Improved card show animation - no flicker
@@ -292,29 +278,16 @@ function showAppCard(card, delay = 0) {
 		card.hideTimeout = null;
 	}
 	
-	// Immediately show the card without flickering
+	// Immediately prepare the card for display
 	card.style.display = 'block';
 	card.classList.remove('hidden');
 	
-	// Use requestAnimationFrame for smoother animations
-	requestAnimationFrame(() => {
-		// Set initial state
-		card.style.transition = 'none';
-		card.style.opacity = '0';
-		card.style.transform = 'translateY(20px) scale(0.98)';
-		
-		// Force reflow
-		card.offsetHeight;
-		
-		// Apply transition and animate in
-		requestAnimationFrame(() => {
-			setTimeout(() => {
-				card.style.transition = 'opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
-				card.style.opacity = '1';
-				card.style.transform = 'translateY(0) scale(1)';
-			}, delay);
-		});
-	});
+	// Use a simple, smooth animation
+	setTimeout(() => {
+		card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+		card.style.opacity = '1';
+		card.style.transform = 'translateY(0) scale(1)';
+	}, delay);
 }
 
 // Improved card hide animation - no flicker
@@ -325,17 +298,17 @@ function hideAppCard(card) {
 		card.showTimeout = null;
 	}
 	
-	// Start hide animation immediately
-	card.style.transition = 'opacity 0.25s cubic-bezier(0.4, 0, 0.6, 1), transform 0.25s cubic-bezier(0.4, 0, 0.6, 1)';
+	// Quick, smooth hide animation
+	card.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
 	card.style.opacity = '0';
-	card.style.transform = 'translateY(-10px) scale(0.98)';
+	card.style.transform = 'translateY(-10px) scale(0.95)';
 	
 	// Hide the card after animation completes
 	card.hideTimeout = setTimeout(() => {
 		card.style.display = 'none';
 		card.classList.add('hidden');
 		card.hideTimeout = null;
-	}, 250);
+	}, 200); // Match transition duration
 }
 
 // Animated Counter for Statistics
@@ -525,13 +498,27 @@ function initializeHoverEffects() {
 
 // Enhanced mobile menu functionality
 function initializeMobileMenu() {
+	console.log('🔧 Initializing mobile menu...');
+	
 	const navToggle = document.querySelector('.nav-toggle');
 	const navMenu = document.querySelector('.nav-menu');
 	const navLinks = document.querySelectorAll('.nav-link');
 	
+	console.log('📱 Mobile menu elements found:', {
+		navToggle: !!navToggle,
+		navMenu: !!navMenu,
+		navLinksCount: navLinks.length
+	});
+	
 	if (navToggle && navMenu) {
-		navToggle.addEventListener('click', function() {
+		console.log('✅ Mobile menu setup successful');
+		
+		navToggle.addEventListener('click', function(e) {
+			e.preventDefault();
+			e.stopPropagation();
+			
 			const isActive = navMenu.classList.contains('active');
+			console.log('🔄 Toggle clicked, current state:', isActive ? 'open' : 'closed');
 			
 			if (isActive) {
 				closeMobileMenu();
@@ -541,8 +528,10 @@ function initializeMobileMenu() {
 		});
 		
 		// Close menu when clicking on nav links
-		navLinks.forEach(link => {
+		navLinks.forEach((link, index) => {
+			console.log(`🔗 Setting up link ${index + 1}:`, link.textContent.trim());
 			link.addEventListener('click', () => {
+				console.log('🔗 Nav link clicked:', link.textContent.trim());
 				closeMobileMenu();
 			});
 		});
@@ -557,32 +546,37 @@ function initializeMobileMenu() {
 		// Close menu on escape key
 		document.addEventListener('keydown', function(e) {
 			if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+				console.log('⌨️ Escape key pressed, closing menu');
 				closeMobileMenu();
 			}
 		});
+	} else {
+		console.error('❌ Mobile menu elements not found!', { navToggle, navMenu });
 	}
 	
 	function openMobileMenu() {
+		console.log('📱 Opening mobile menu');
 		navMenu.classList.add('active');
 		navToggle.classList.add('active');
-		document.body.style.overflow = 'hidden'; // Prevent background scrolling
 		
-		// Animate menu items
+		// Animate menu items with a stagger effect
 		navLinks.forEach((link, index) => {
 			link.style.opacity = '0';
-			link.style.transform = 'translateX(30px)';
+			link.style.transform = 'translateY(-10px)';
 			setTimeout(() => {
 				link.style.transition = 'all 0.3s ease';
 				link.style.opacity = '1';
-				link.style.transform = 'translateX(0)';
-			}, index * 100);
+				link.style.transform = 'translateY(0)';
+			}, index * 80);
 		});
+		
+		console.log('✅ Mobile menu opened');
 	}
 	
 	function closeMobileMenu() {
+		console.log('📱 Closing mobile menu');
 		navMenu.classList.remove('active');
 		navToggle.classList.remove('active');
-		document.body.style.overflow = '';
 		
 		// Reset nav link styles
 		navLinks.forEach(link => {
@@ -590,6 +584,8 @@ function initializeMobileMenu() {
 			link.style.opacity = '';
 			link.style.transform = '';
 		});
+		
+		console.log('✅ Mobile menu closed');
 	}
 }
 
