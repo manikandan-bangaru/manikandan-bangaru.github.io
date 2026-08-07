@@ -1,0 +1,31 @@
+{
+  "name": "manikandan-bangaru.github.io",
+  "version": "1.0.0",
+  "description": "Modern, responsive website for Magiban Technologies Pvt Ltd - a leading mobile application development company.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manikandan-bangaru/manikandan-bangaru.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/manikandan-bangaru/manikandan-bangaru.github.io/issues"
+  },
+  "homepage": "https://github.com/manikandan-bangaru/manikandan-bangaru.github.io#readme",
+  "dependencies": {
+    "@react-three/drei": "^10.7.8",
+    "@react-three/fiber": "^9.7.0",
+    "atropos": "^2.0.2",
+    "framer-motion": "^13.0.0",
+    "lucide-react": "^1.30.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "three": "^0.185.1"
+  }
+}
