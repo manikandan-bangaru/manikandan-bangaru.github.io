@@ -120,8 +120,8 @@ export const apps = [
     packageId: 'com.magiban.org.habittracker',
     features: ['Streak Tracking', 'Custom Reminders', 'Weekly Analytics', 'Dark Mode'],
     links: {
-      play: 'https://play.google.com/store/apps/details?id=com.magiban.org.systemfit',
-      samsung: 'https://apps.samsung.com/appquery/appDetail.as?appId=com.magiban.org.systemfit',
+      play: 'https://play.google.com/store/apps/details?id=com.magiban.org.habittracker',
+      samsung: 'https://apps.samsung.com/appquery/appDetail.as?appId=com.magiban.org.habittracker',
       appstore: ''
     }
   },
@@ -138,8 +138,8 @@ export const apps = [
     packageId: 'com.magiban.org.studentapp',
     features: ['Interactive Timetable', 'GPA Grade Calc', 'Assignment Reminders', 'Clean UI'],
     links: {
-      play: 'https://play.google.com/store/apps/details?id=com.magiban.org.systemfit',
-      samsung: 'https://apps.samsung.com/appquery/appDetail.as?appId=com.magiban.org.systemfit',
+      play: 'https://play.google.com/store/apps/details?id=com.magiban.org.studentapp',
+      samsung: 'https://apps.samsung.com/appquery/appDetail.as?appId=com.magiban.org.studentapp',
       appstore: ''
     }
   },
@@ -150,15 +150,15 @@ export const apps = [
     shortDescription: 'Stack blocks to the sky in this addictive timing and physics-based puzzle arcade.',
     seoKeywords: 'Shadow Block Stack, Physics Stacking Game, Tower Builder Puzzle, Timing Arcade Game',
     fullDescription: 'Shadow Block Stack tests your timing and precision as you stack moving blocks to build the tallest tower possible without letting them collapse.',
-    image: 'images/apps/2048.png',
+    image: 'images/apps/shadow_block_stack.png',
     rating: '4.2',
     downloads: '1,500+',
-    packageId: 'com.magiban.org.blockstack',
+    packageId: 'com.magiban.org.shadow_block_stack',
     features: ['Endless Tower Mode', 'Custom Block Skins', 'Physics Simulation', 'Leaderboards'],
     links: {
-      play: 'https://play.google.com/store/apps/details?id=com.magiban.org.systemfit',
-      samsung: 'https://apps.samsung.com/appquery/appDetail.as?appId=com.magiban.org.systemfit',
-      appstore: 'https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://apps.apple.com/in/app/apple-store/id375380948&ved=2ahUKEwj7zJ7b6Y-WAxXakeEIHRUnIwoQFnoECBgQAQ&usg=AOvVaw3qakZ45c0vRlq1nVw0PScB'
+      play: 'https://play.google.com/store/apps/details?id=com.magiban.org.shadow_block_stack',
+      samsung: 'https://galaxystore.samsung.com/detail/com.magiban.org.shadow_block_stack',
+      appstore: ''
     }
   }
 ];

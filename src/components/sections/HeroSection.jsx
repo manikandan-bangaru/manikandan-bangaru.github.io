@@ -1,6 +1,6 @@
 import React, { Suspense, useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Smartphone, Download, Layers, Sparkles, Star, ExternalLink, Activity, Apple } from 'lucide-react'
+import { Smartphone, Download, Layers, Sparkles, Star, Activity, Apple } from 'lucide-react'
 import Atropos from 'atropos/react'
 import Hero3D from '../canvas/Hero3D'
 import { apps, categories } from '../../data/apps'
