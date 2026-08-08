@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Smartphone, Download, Layers, Sparkles, Star, Activity, Apple } from 'lucide-react'
 import Atropos from 'atropos/react'
 import Hero3D from '../canvas/Hero3D'
+import ErrorBoundary from '../common/ErrorBoundary'
 import { apps, categories } from '../../data/apps'
 import { getSmartStoreLink, detectUserDevice } from '../../utils/deviceDetect'
 
@@ -99,10 +100,12 @@ export default function HeroSection({ selectedCategory, onSelectCategory }) {
 
   return (
     <section className="relative min-h-screen pt-6 pb-20 overflow-hidden gradient-mesh-bg">
-      {/* 3D WebGL Canvas Background */}
-      <Suspense fallback={<div className="absolute inset-0 bg-[#090d16]" />}>
-        <Hero3D />
-      </Suspense>
+      {/* 3D WebGL Canvas Background with Resilient ErrorBoundary */}
+      <ErrorBoundary fallback={<div className="absolute inset-0 bg-[#090d16]" />}>
+        <Suspense fallback={<div className="absolute inset-0 bg-[#090d16]" />}>
+          <Hero3D />
+        </Suspense>
+      </ErrorBoundary>
 
       {/* Glassmorphism Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#090d16]/40 to-[#090d16] -z-10" />

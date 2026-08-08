@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useMemo } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { OrbitControls, Sphere, Torus, TorusKnot, Icosahedron, MeshDistortMaterial } from '@react-three/drei'
 
@@ -8,13 +8,15 @@ function SpinningCentralOrb() {
 
   useFrame((state) => {
     const t = state.clock.getElapsedTime()
-    // Continuous multi-axis spinning rotation
-    meshRef.current.rotation.y = t * 0.4
-    meshRef.current.rotation.x = t * 0.25
-    meshRef.current.position.y = Math.sin(t * 1.5) * 0.25
-
-    ringRef.current.rotation.z = t * 0.5
-    ringRef.current.rotation.x = Math.PI / 3 + t * 0.2
+    if (meshRef.current) {
+      meshRef.current.rotation.y = t * 0.4
+      meshRef.current.rotation.x = t * 0.25
+      meshRef.current.position.y = Math.sin(t * 1.5) * 0.25
+    }
+    if (ringRef.current) {
+      ringRef.current.rotation.z = t * 0.5
+      ringRef.current.rotation.x = Math.PI / 3 + t * 0.2
+    }
   })
 
   return (
@@ -46,16 +48,18 @@ function FloatingShapes() {
 
   useFrame((state) => {
     const t = state.clock.getElapsedTime()
-    // Spinning rotations for side shapes
-    torusKnotRef.current.rotation.x = t * 0.5
-    torusKnotRef.current.rotation.y = t * 0.4
-    torusKnotRef.current.position.x = Math.sin(t * 0.8) * 2.8 + 3.4
-    torusKnotRef.current.position.y = Math.cos(t * 1.1) * 1.5
-
-    icoRef.current.rotation.x = -t * 0.4
-    icoRef.current.rotation.z = t * 0.6
-    icoRef.current.position.x = -Math.sin(t * 0.7) * 2.8 - 3.4
-    icoRef.current.position.y = Math.sin(t * 0.9) * 1.5
+    if (torusKnotRef.current) {
+      torusKnotRef.current.rotation.x = t * 0.5
+      torusKnotRef.current.rotation.y = t * 0.4
+      torusKnotRef.current.position.x = Math.sin(t * 0.8) * 2.8 + 3.4
+      torusKnotRef.current.position.y = Math.cos(t * 1.1) * 1.5
+    }
+    if (icoRef.current) {
+      icoRef.current.rotation.x = -t * 0.4
+      icoRef.current.rotation.z = t * 0.6
+      icoRef.current.position.x = -Math.sin(t * 0.7) * 2.8 - 3.4
+      icoRef.current.position.y = Math.sin(t * 0.9) * 1.5
+    }
   })
 
   return (
@@ -73,25 +77,30 @@ function FloatingShapes() {
 
 function FloatingParticles() {
   const particlesRef = useRef()
+
+  const positions = useMemo(() => {
+    const particleCount = 180
+    const pos = new Float32Array(particleCount * 3)
+    for (let i = 0; i < particleCount * 3; i++) {
+      pos[i] = (Math.random() - 0.5) * 20
+    }
+    return pos
+  }, [])
   
   useFrame((state) => {
     const t = state.clock.getElapsedTime()
-    particlesRef.current.rotation.y = t * 0.12
-    particlesRef.current.rotation.x = t * 0.06
+    if (particlesRef.current) {
+      particlesRef.current.rotation.y = t * 0.12
+      particlesRef.current.rotation.x = t * 0.06
+    }
   })
-
-  const particleCount = 180
-  const positions = new Float32Array(particleCount * 3)
-  for (let i = 0; i < particleCount * 3; i++) {
-    positions[i] = (Math.random() - 0.5) * 20
-  }
 
   return (
     <points ref={particlesRef}>
       <bufferGeometry>
         <bufferAttribute
           attach="attributes-position"
-          count={particleCount}
+          count={180}
           array={positions}
           itemSize={3}
         />
