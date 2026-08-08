@@ -161,7 +161,7 @@ export default function HeroSection({ selectedCategory, onSelectCategory }) {
           {stats.map((stat) => {
             const Icon = stat.icon
             return (
-              <Atropos key={stat.label} className="atropos-stat-card rounded-2xl overflow-hidden" shadow={false} highlight={true}>
+              <Atropos key={stat.label} rotateTouch={false} className="atropos-stat-card rounded-2xl overflow-hidden" shadow={false} highlight={true}>
                 <div className={`h-full rounded-2xl ${stat.bgGradient} backdrop-blur-xl border p-4 sm:p-5 flex flex-col items-center text-center transition-all duration-300 group overflow-hidden relative`}>
                   
                   <div className={`flex justify-center mb-1.5 ${stat.color}`} data-atropos-offset="3">
@@ -237,7 +237,7 @@ export default function HeroSection({ selectedCategory, onSelectCategory }) {
                 >
                   
                   {/* 3D Atropos Visual Banner */}
-                  <Atropos className="atropos-app-card w-full flex-1 rounded-t-2xl overflow-hidden" shadow={false} highlight={true}>
+                  <Atropos rotateTouch={false} className="atropos-app-card w-full flex-1 rounded-t-2xl overflow-hidden" shadow={false} highlight={true}>
                     <div className="h-full flex flex-col justify-between">
                       
                       {/* Image Header Area */}

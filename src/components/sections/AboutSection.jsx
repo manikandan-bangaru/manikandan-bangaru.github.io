@@ -84,7 +84,7 @@ export default function AboutSection() {
               {highlights.map((item, idx) => {
                 const Icon = item.icon
                 return (
-                  <Atropos key={item.title} className="atropos-vision-card rounded-2xl overflow-hidden" shadow={false} highlight={true}>
+                  <Atropos key={item.title} rotateTouch={false} className="atropos-vision-card rounded-2xl overflow-hidden" shadow={false} highlight={true}>
                     <motion.div
                       initial={{ opacity: 0, y: 15 }}
                       whileInView={{ opacity: 1, y: 0 }}
@@ -118,7 +118,7 @@ export default function AboutSection() {
             transition={{ duration: 0.6 }}
             className="flex-1 w-full flex"
           >
-            <Atropos className="atropos-craft-card w-full h-full rounded-3xl overflow-hidden" shadow={true} highlight={true}>
+            <Atropos rotateTouch={false} className="atropos-craft-card w-full h-full rounded-3xl overflow-hidden" shadow={true} highlight={true}>
               <div className="relative rounded-3xl overflow-hidden border border-accent-neon/40 p-1 bg-gradient-to-tr from-accent-purple/50 via-accent-neon/40 to-accent-emerald/50 shadow-2xl h-full flex flex-col justify-between">
 
                 <div className="bg-gradient-to-b from-slate-900/95 via-slate-900/90 to-slate-950/95 backdrop-blur-xl rounded-[22px] p-8 sm:p-10 relative z-10 h-full flex flex-col justify-between overflow-hidden">
