@@ -126,7 +126,7 @@ export default function PrivacyPolicy({ onBack }) {
             </div>
             
             <p className="text-slate-300 text-sm leading-relaxed mb-4">
-              For applications that provide health and fitness tracking features (such as <em>Solo Level Up: System Fitness</em>), we access and collect Health-related data. This section comprehensively discloses our practices regarding Health data:
+              For applications that provide health, fitness, or habit tracking features (such as <em>Solo Level Up: System Fitness</em> and <em>Habit Tracker: Atmos Sphere</em>), we access and collect health-related data. This section comprehensively discloses our practices regarding Health data:
             </p>
             
             <ul className="space-y-3 text-slate-300 text-sm">
@@ -288,10 +288,27 @@ export default function PrivacyPolicy({ onBack }) {
           >
             <div className="flex items-center gap-3 text-accent-emerald mb-4">
               <AlertCircle className="w-6 h-6" />
-              <h2 className="text-xl font-display font-bold text-white">9. Children's Privacy</h2>
+              <h2 className="text-xl font-display font-bold text-white">9. Children's Privacy & Families Policy Compliance</h2>
             </div>
-            <p className="text-slate-300 text-sm leading-relaxed">
-              Some of our services are not intended for children under the age of 13. We do not knowingly collect or solicit personal information from children. If we learn that we have collected personal information from a child under 13, we will take steps to delete such information promptly.
+            <p className="text-slate-300 text-sm leading-relaxed mb-3">
+              We take children's privacy with utmost seriousness. For our child-directed educational applications, specifically <strong>Kiddoz: Early Learning & Stories</strong> (<em>com.magiban.org.kiddoz</em>), we strictly comply with the Google Play Families Policy and the Children's Online Privacy Protection Act (COPPA):
+            </p>
+            <ul className="space-y-2 text-slate-300 text-sm mb-4">
+              <li className="flex items-start gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-accent-emerald mt-2 shrink-0" />
+                <span><strong>Zero Personal Data Collection:</strong> We do not collect, request, or store any personally identifiable information (PII) from children.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-accent-emerald mt-2 shrink-0" />
+                <span><strong>No Ad Tracking or Identifiers:</strong> In accordance with Google Play Families Policy, our children's apps do not transmit Advertising IDs (AAID), device identifiers, or telemetric data to third parties.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-accent-emerald mt-2 shrink-0" />
+                <span><strong>100% On-Device Operation:</strong> Story progress, audio playback, drawing canvases, and tracing metrics are processed entirely offline on the user's local device.</span>
+              </li>
+            </ul>
+            <p className="text-slate-400 text-xs leading-relaxed">
+              For our other general-audience services, we do not knowingly collect personal data from children under 13. If you believe a child has provided us with personal information, please contact us immediately so we can remove it.
             </p>
           </motion.section>
 

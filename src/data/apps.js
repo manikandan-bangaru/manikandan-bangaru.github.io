@@ -109,19 +109,37 @@ export const apps = [
   },
   {
     id: 'habit-builder',
-    title: 'Habit Builder',
+    title: 'Habit Tracker: Atmos Sphere',
     category: 'Productivity',
-    shortDescription: 'Build positive routines and break bad habits with daily streak tracking.',
-    seoKeywords: 'Habit Builder App, Daily Streak Habit Tracker, Routine Planner, Self Improvement Utility',
-    fullDescription: 'Habit Builder helps you establish lasting habits, track daily streaks, and maintain personal productivity goals with customized notifications.',
+    shortDescription: 'Harmonize daily habits with live weather, routine heatmaps, and smart streaks.',
+    seoKeywords: 'Habit Tracker Atmos Sphere, Weather Habit Planner, Routine Streak Tracker, Health Connect Hydration, Daily Habit Organizer',
+    fullDescription: 'Habit Tracker: Atmos Sphere connects your daily self-improvement goals with dynamic live weather backdrops. Featuring automated Google Health Connect sync for steps, hydration, and calories, alongside intuitive 3-tier status calendars and streaks.',
     image: 'images/apps/habit tracker.png',
-    rating: '4.6',
+    rating: '4.8',
     downloads: '3,000+',
-    packageId: 'com.magiban.org.habittracker',
-    features: ['Streak Tracking', 'Custom Reminders', 'Weekly Analytics', 'Dark Mode'],
+    packageId: 'com.magiban.org.habit_tracker',
+    features: ['Live Weather Themes', 'Health Connect Sync', '3-Tier Heatmaps', 'Smart Streaks'],
     links: {
-      play: 'https://play.google.com/store/apps/details?id=com.magiban.org.habittracker',
-      samsung: 'https://apps.samsung.com/appquery/appDetail.as?appId=com.magiban.org.habittracker',
+      play: 'https://play.google.com/store/apps/details?id=com.magiban.org.habit_tracker',
+      samsung: 'https://galaxystore.samsung.com/detail/com.magiban.org.habit_tracker',
+      appstore: ''
+    }
+  },
+  {
+    id: 'kiddoz',
+    title: 'Kiddoz: Early Learning & Stories',
+    category: 'Education',
+    shortDescription: 'Interactive early childhood learning with handwriting tracing, nursery rhymes, and 1,000+ offline stories.',
+    seoKeywords: 'Kiddoz, Kids Early Learning, Offline Kids Stories, Letter Tracing, Educational Nursery Rhymes, Toddler Learning App',
+    fullDescription: 'Kiddoz is an offline-capable, developmentally adaptive early childhood learning app for children aged 2-10. Packed with 1,000+ narrated moral stories, vector-guided letter & number tracing, interactive visual vocabulary dictionary, and curated sing-along nursery rhymes.',
+    image: 'images/apps/kiddoz.png',
+    rating: '4.9',
+    downloads: '1,000+',
+    packageId: 'com.magiban.org.kiddoz',
+    features: ['1,000+ Offline Stories', 'Letter & Shape Tracing', 'Nursery Rhymes & Videos', 'Interactive Visual Dictionary'],
+    links: {
+      play: 'https://play.google.com/store/apps/details?id=com.magiban.org.kiddoz',
+      samsung: '',
       appstore: ''
     }
   },

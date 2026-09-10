@@ -59,7 +59,7 @@ export default function HeroSection({ selectedCategory, onSelectCategory }) {
     },
     { 
       label: 'Published Apps', 
-      numValue: 8, 
+      numValue: apps.length, 
       suffix: '+', 
       icon: Smartphone, 
       color: 'text-accent-neon', 
