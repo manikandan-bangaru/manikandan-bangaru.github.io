@@ -5,7 +5,6 @@ import {
   CheckCircle, Database, Server, UserCheck, Clock, AlertCircle, RefreshCw
 } from 'lucide-react'
 import { SITE_CONFIG } from '../../constants/siteConfig'
-import { apps } from '../../data/apps'
 
 export default function PrivacyPolicy({ onBack }) {
   return (
@@ -48,24 +47,6 @@ export default function PrivacyPolicy({ onBack }) {
           <div className="flex items-center gap-2 text-xs text-slate-400 mt-6 pt-4 border-t border-border/60">
             <Clock className="w-4 h-4 text-accent-neon" />
             <span>Effective Date: December 10, 2024 | Updated: August 2026</span>
-          </div>
-
-          <div className="mt-6 pt-5 border-t border-border/60">
-            <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Applies to our apps</div>
-            <div className="flex flex-wrap gap-3">
-              {apps.map((app) => (
-                <img
-                  key={app.id}
-                  src={`/${app.image}`}
-                  alt={app.title}
-                  title={app.title}
-                  width="48"
-                  height="48"
-                  loading="lazy"
-                  className="w-12 h-12 rounded-xl border border-border object-cover"
-                />
-              ))}
-            </div>
           </div>
         </motion.div>
 
