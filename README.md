@@ -19,3 +19,5 @@ Modern, responsive website for Magiban Technologies Pvt Ltd - a leading mobile a
 Magiban Technologies Pvt Ltd specializes in innovative mobile applications across puzzle games, productivity tools, and health & fitness categories.
 
 Visit our website: [magiban.in](https://magiban.in)
+
+fix
