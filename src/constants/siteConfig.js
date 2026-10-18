@@ -4,7 +4,7 @@ export const SITE_CONFIG = {
   shortName: 'Magiban Tech',
   domain: 'magiban.in',
   siteUrl: 'https://magiban.in',
-  supportEmail: 'mkd000002@gmail.com',
+  supportEmail: 'support@magiban.in',
   location: 'Worldwide Distribution',
   platformBadge: 'Google Play & Samsung Store',
   establishedYear: '2024',
