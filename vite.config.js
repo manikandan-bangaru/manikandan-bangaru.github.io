@@ -11,10 +11,12 @@ export default defineConfig({
     outDir: 'dist',
     emptyOutDir: true,
     rollupOptions: {
-      // policy.html is a second entry so /policy.html serves the same React app
+      // Extra entries so /policy.html and /arrows/privacy.html serve the same React app
       input: {
         main: resolve(__dirname, 'index.html'),
         policy: resolve(__dirname, 'policy.html'),
+        // Arrows Play Store listing links here: /arrows/privacy.html
+        'arrows/privacy': resolve(__dirname, 'arrows/privacy.html'),
       },
     },
   }

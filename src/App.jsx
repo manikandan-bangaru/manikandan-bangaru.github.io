@@ -3,6 +3,7 @@ import Navbar from './components/sections/Navbar'
 import HeroSection from './components/sections/HeroSection'
 import AboutSection from './components/sections/AboutSection'
 import PrivacyPolicy from './components/sections/PrivacyPolicy'
+import ArrowsPrivacyPolicy from './components/sections/ArrowsPrivacyPolicy'
 import Footer from './components/sections/Footer'
 import AdSenseBanner from './components/common/AdSenseBanner'
 
@@ -27,6 +28,7 @@ function App() {
   }
 
   const isPrivacyPage = currentPath.includes('policy') || currentPath.includes('privacy')
+  const isArrowsPrivacyPage = currentPath.includes('/arrows/')
 
   return (
     <div className="min-h-screen flex flex-col bg-background text-white selection:bg-accent-neon selection:text-white">
@@ -34,7 +36,9 @@ function App() {
       <Navbar currentPath={currentPath} onNavigate={handleNavigate} />
 
       {/* Conditional Route Render */}
-      {isPrivacyPage ? (
+      {isArrowsPrivacyPage ? (
+        <ArrowsPrivacyPolicy onBack={() => handleNavigate('/')} />
+      ) : isPrivacyPage ? (
         <PrivacyPolicy onBack={() => handleNavigate('/')} />
       ) : (
         <main>
