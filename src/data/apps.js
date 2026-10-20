@@ -1,5 +1,23 @@
 export const apps = [
   {
+    id: 'arrows',
+    title: 'Arrows - Puzzle Escape',
+    category: 'Puzzle Games',
+    shortDescription: 'Tap arrows to set them free. A calm, clever puzzle with bombs & endless levels.',
+    seoKeywords: 'Arrows Puzzle Escape, Arrow Escape Puzzle, Tap Arrows Logic Game, Offline Brain Puzzle, Relaxing Puzzle Game',
+    fullDescription: 'Arrows is a calm, clever puzzle game about order. Tap an arrow and it flies off in its direction, but only if nothing is in its way. Work out the right order, defuse bomb arrows before they hit zero, and clear endless generated, always-solvable boards along a relaxing level map.',
+    image: 'images/apps/arrows.png',
+    rating: 'New',
+    downloads: 'New',
+    packageId: 'com.magiban.org.arrows.puzzle',
+    features: ['Endless Solvable Levels', 'Bomb Countdown Arrows', 'Light & Dark Modes', 'Offline Play'],
+    links: {
+      play: 'https://play.google.com/store/apps/details?id=com.magiban.org.arrows.puzzle',
+      samsung: '',
+      appstore: ''
+    }
+  },
+  {
     id: 'solo-level-up',
     title: 'Solo Level Up: System Fitness',
     category: 'Health & Fitness',

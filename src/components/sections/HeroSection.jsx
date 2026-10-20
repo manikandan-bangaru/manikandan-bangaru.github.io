@@ -96,7 +96,7 @@ export default function HeroSection({ selectedCategory, onSelectCategory }) {
     }
   }
 
-  const featuredApp = apps.find(app => app.id === 'solo-level-up') || apps[0]
+  const featuredApp = apps.find(app => app.id === 'arrows') || apps[0]
 
   return (
     <section className="relative min-h-screen pt-6 pb-20 overflow-hidden gradient-mesh-bg">
@@ -127,7 +127,7 @@ export default function HeroSection({ selectedCategory, onSelectCategory }) {
           <Sparkles className="w-4 h-4 text-accent-neon group-hover:rotate-12 transition-transform" />
           <span>New Release: {featuredApp.title}</span>
           <span className="flex items-center text-yellow-400 font-bold gap-0.5 ml-1.5">
-            <Star className="w-3.5 h-3.5 fill-yellow-400" /> {featuredApp.rating}
+            {isNaN(parseFloat(featuredApp.rating)) ? featuredApp.rating : <><Star className="w-3.5 h-3.5 fill-yellow-400" /> {featuredApp.rating}</>}
           </span>
         </motion.div>
 
@@ -258,7 +258,7 @@ export default function HeroSection({ selectedCategory, onSelectCategory }) {
                         
                         {/* Rating Badge */}
                         <div className="absolute top-3 right-3 z-20 bg-slate-950/90 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/10 flex items-center gap-1 shadow-md" data-atropos-offset="5">
-                          <Star className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
+                          {!isNaN(parseFloat(app.rating)) && <Star className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />}
                           <span className="text-white text-xs font-bold">{app.rating}</span>
                         </div>
                         
