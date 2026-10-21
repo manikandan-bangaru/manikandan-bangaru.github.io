@@ -1,6 +1,6 @@
 export const SITE_CONFIG = {
   name: 'Magiban Technologies',
-  fullName: 'Magiban Technologies Pvt Ltd',
+  fullName: 'Magiban Technologies',
   shortName: 'Magiban Tech',
   domain: 'magiban.in',
   siteUrl: 'https://magiban.in',
@@ -15,7 +15,7 @@ export const SITE_CONFIG = {
   },
   meta: {
     title: 'Magiban Technologies | Solo Level Up Fitness App & Mobile Puzzle Games Studio',
-    description: 'Magiban Technologies Pvt Ltd is a leading mobile application developer crafting high-converting Android & iOS apps including Solo Level Up: System Fitness RPG workout tracker, Arrows - Puzzle Escape, Kiddoz Early Learning & Stories, Brain Puzzle Quest, Sudoku Master, and Habit Tracker: Atmos Sphere.',
+    description: 'Magiban Technologies is a leading mobile application developer crafting high-converting Android & iOS apps including Solo Level Up: System Fitness RPG workout tracker, Arrows - Puzzle Escape, Kiddoz Early Learning & Stories, Brain Puzzle Quest, Sudoku Master, and Habit Tracker: Atmos Sphere.',
     keywords: 'Magiban Technologies, Magiban, Arrows Puzzle Escape, Solo Level Up System Fitness, Kiddoz Early Learning, Kids Offline Stories, RPG Workout App, Solo Leveling Fitness, Brain Puzzle Quest, Sudoku Master, Classic 2048, Bomb Hunt Minesweeper, Habit Tracker Atmos Sphere, My Student Organizer, Mobile Games India, Android Apps Studio'
   }
 };

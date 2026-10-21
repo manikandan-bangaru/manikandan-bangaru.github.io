@@ -10,6 +10,7 @@ export const apps = [
     rating: 'New',
     downloads: 'New',
     packageId: 'com.magiban.org.block.blast',
+    feature: 'images/apps/feature/block_blast.jpg',
     features: ['Combos & Fever Mode', 'Endless Journey Levels', 'Daily Puzzle', 'Offline Play'],
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.block.blast',
@@ -28,6 +29,7 @@ export const apps = [
     rating: 'New',
     downloads: 'New',
     packageId: 'com.magiban.org.crossword',
+    feature: 'images/apps/feature/crossword.jpg',
     features: ['Swipe Letter Wheel', 'Daily Crossword', 'Learn Word Meanings', 'Offline Play'],
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.crossword',
@@ -46,6 +48,7 @@ export const apps = [
     rating: 'New',
     downloads: 'New',
     packageId: 'com.magiban.org.arrows.puzzle',
+    feature: 'images/apps/feature/arrows.jpg',
     features: ['Endless Solvable Levels', 'Bomb Countdown Arrows', 'Light & Dark Modes', 'Offline Play'],
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.arrows.puzzle',
