@@ -1,5 +1,41 @@
 export const apps = [
   {
+    id: 'block-blast-odyssey',
+    title: 'Block Blast Odyssey: Puzzle',
+    category: 'Puzzle Games',
+    shortDescription: 'Drag & drop blocks, blast lines, chain combos! Relaxing offline block puzzle.',
+    seoKeywords: 'Block Blast Odyssey, Block Puzzle Game, Jewel Block Puzzle, 8x8 Block Blast, Offline Block Puzzle, Daily Block Puzzle',
+    fullDescription: 'Block Blast Odyssey is a relaxing block puzzle game where you fit colorful jewel blocks on an 8x8 board, clear full lines and chain huge combos. Fair pieces every time, special Bomb, Bolt and Prism blocks, a journey of endless levels with bosses, a daily seed puzzle and beautiful block themes, all playable offline.',
+    image: 'images/apps/block_blast.png',
+    rating: 'New',
+    downloads: 'New',
+    packageId: 'com.magiban.org.block.blast',
+    features: ['Combos & Fever Mode', 'Endless Journey Levels', 'Daily Puzzle', 'Offline Play'],
+    links: {
+      play: 'https://play.google.com/store/apps/details?id=com.magiban.org.block.blast',
+      samsung: '',
+      appstore: ''
+    }
+  },
+  {
+    id: 'crossword-word-connect',
+    title: 'Crossword Puzzle: Word Connect',
+    category: 'Puzzle Games',
+    shortDescription: 'Swipe letters to fill the crossword! Free offline word game & daily word puzzle.',
+    seoKeywords: 'Crossword Puzzle Word Connect, Word Connect Game, Daily Crossword, Offline Word Game, Word Puzzle Brain Game, Vocabulary Builder',
+    fullDescription: 'Crossword Puzzle: Word Connect is a relaxing word game: swipe across the letter wheel to spell words and fill the crossword grid. Thousands of levels across 12 beautiful worlds, a new daily puzzle every day, word meanings to grow your vocabulary and helpful hints, all playable offline.',
+    image: 'images/apps/crossword.png',
+    rating: 'New',
+    downloads: 'New',
+    packageId: 'com.magiban.org.crossword',
+    features: ['Swipe Letter Wheel', 'Daily Crossword', 'Learn Word Meanings', 'Offline Play'],
+    links: {
+      play: 'https://play.google.com/store/apps/details?id=com.magiban.org.crossword',
+      samsung: '',
+      appstore: ''
+    }
+  },
+  {
     id: 'arrows',
     title: 'Arrows - Puzzle Escape',
     category: 'Puzzle Games',
