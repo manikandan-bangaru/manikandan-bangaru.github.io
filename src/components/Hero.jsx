@@ -1,7 +1,11 @@
 import { apps, categories } from '../data/apps'
 
 export default function Hero() {
-  const newApps = apps.filter(app => app.feature)
+  // New releases first, then a few favourites, for a 3 x 2 icon wall
+  const wallApps = [
+    ...apps.filter(app => app.feature),
+    ...['solo-level-up', 'sudoku-master', 'kiddoz'].map(id => apps.find(app => app.id === id)),
+  ].filter(Boolean)
 
   return (
     <section id="top" className="hero">
@@ -27,10 +31,10 @@ export default function Hero() {
 
         <div className="hero-wall in" style={{ '--d': '.16s' }}>
           <div className="wall">
-            {newApps.map((app, i) => (
-              <div className="tile" key={app.id} style={{ '--f': `${-1.2 * i}s` }}>
+            {wallApps.map((app, i) => (
+              <div className="tile" key={app.id} style={{ '--f': `${-1.1 * i}s` }}>
                 <img src={app.image} alt={app.title} width="120" height="120" />
-                <span className="pill-new">NEW</span>
+                {app.feature && <span className="pill-new">NEW</span>}
               </div>
             ))}
           </div>
