@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 export default function AdSenseBanner({ 
   adClient = "ca-pub-6804393425769663", 
@@ -42,7 +42,7 @@ export default function AdSenseBanner({
   // If ad is not loaded or unfilled, do not render any container or layout box!
   if (!adLoaded) {
     return (
-      <div className="hidden">
+      <div hidden>
         <ins
           ref={insRef}
           className="adsbygoogle"
@@ -57,16 +57,12 @@ export default function AdSenseBanner({
   }
 
   return (
-    <div className={`my-8 max-w-5xl mx-auto px-4 text-center ${className}`}>
-      <div className="bg-slate-900/60 backdrop-blur-md rounded-2xl border border-slate-800/80 p-3 sm:p-4 overflow-hidden relative shadow-lg">
-        <div className="text-[10px] uppercase font-bold text-slate-500 tracking-wider mb-2 flex items-center justify-center gap-1.5">
-          <span className="w-1.5 h-1.5 rounded-full bg-slate-600" />
-          <span>Sponsored</span>
-          <span className="w-1.5 h-1.5 rounded-full bg-slate-600" />
-        </div>
+    <div className={`ad ${className}`}>
+      <div className="ad-box">
+        <div className="ad-label">SPONSORED</div>
         <ins
           ref={insRef}
-          className="adsbygoogle block"
+          className="adsbygoogle"
           style={{ display: 'block' }}
           data-ad-client={adClient}
           {...(adSlot ? { 'data-ad-slot': adSlot } : {})}

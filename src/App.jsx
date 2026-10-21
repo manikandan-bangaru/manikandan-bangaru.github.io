@@ -1,61 +1,31 @@
-import React, { useState, useEffect } from 'react'
-import Navbar from './components/sections/Navbar'
-import HeroSection from './components/sections/HeroSection'
-import AboutSection from './components/sections/AboutSection'
-import PrivacyPolicy from './components/sections/PrivacyPolicy'
-import Footer from './components/sections/Footer'
+import Header from './components/Header'
+import Hero from './components/Hero'
+import AppsList from './components/AppsList'
+import NewReleases from './components/NewReleases'
+import Studio from './components/Studio'
+import PrivacyPolicy from './components/PrivacyPolicy'
+import Footer from './components/Footer'
 import AdSenseBanner from './components/common/AdSenseBanner'
 
-function App() {
-  const [currentPath, setCurrentPath] = useState(window.location.pathname)
-  const [selectedCategory, setSelectedCategory] = useState('All')
+// Two pages: / (home) and /policy.html. Links between them are plain page loads.
+const isPrivacy = /policy|privacy/.test(window.location.pathname)
 
-  useEffect(() => {
-    const handlePopState = () => {
-      setCurrentPath(window.location.pathname)
-    }
-    window.addEventListener('popstate', handlePopState)
-    return () => window.removeEventListener('popstate', handlePopState)
-  }, [])
-
-  const handleNavigate = (path) => {
-    setCurrentPath(path)
-    if (window.history.pushState) {
-      window.history.pushState(null, '', path)
-    }
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
-
-  const isPrivacyPage = currentPath.includes('policy') || currentPath.includes('privacy')
-
+export default function App() {
   return (
-    <div className="min-h-screen flex flex-col bg-background text-white selection:bg-accent-neon selection:text-white">
-      {/* Sticky Navigation Bar */}
-      <Navbar currentPath={currentPath} onNavigate={handleNavigate} />
-
-      {/* Conditional Route Render */}
-      {isPrivacyPage ? (
-        <PrivacyPolicy onBack={() => handleNavigate('/')} />
+    <>
+      <Header isPrivacy={isPrivacy} />
+      {isPrivacy ? (
+        <PrivacyPolicy />
       ) : (
         <main>
-          {/* Page 1 Unified Landing: Hero, 3D Canvas, Stats, Categories, and Products Showcase */}
-          <HeroSection 
-            selectedCategory={selectedCategory} 
-            onSelectCategory={setSelectedCategory}
-          />
-          
-          {/* Studio Mission & Vision Section */}
-          <AboutSection />
-
-          {/* Strategic Ad Banner in Last Section (Only visible if ad is filled) */}
-          <AdSenseBanner className="my-8" />
+          <Hero />
+          <AppsList />
+          <NewReleases />
+          <Studio />
+          <AdSenseBanner />
         </main>
       )}
-
-      {/* Footer */}
-      <Footer onNavigate={handleNavigate} />
-    </div>
+      <Footer />
+    </>
   )
 }
-
-export default App
