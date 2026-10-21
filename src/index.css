@@ -174,10 +174,13 @@ h1, h2, h3, p { margin: 0; }
 @media (max-width: 960px) {
   .hero-grid, .studio { grid-template-columns: minmax(0, 1fr); }
   .hero-wall { display: none; }
-  .three, .apps { grid-template-columns: minmax(0, 1fr); }
+  .three, .apps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .nav .hide-s { display: none; }
   .pp-side { max-width: none; flex-basis: 100%; }
   .toc { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .three, .apps { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 560px) {
   .wrap, .ad { padding: 0 16px; }
