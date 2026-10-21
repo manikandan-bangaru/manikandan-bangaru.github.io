@@ -13,7 +13,7 @@ export const apps = [
     features: ['Endless Solvable Levels', 'Bomb Countdown Arrows', 'Light & Dark Modes', 'Offline Play'],
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.arrows.puzzle',
-      samsung: '',
+      samsung: 'https://galaxystore.samsung.com/detail/com.magiban.org.arrows.puzzle',
       appstore: ''
     }
   },
