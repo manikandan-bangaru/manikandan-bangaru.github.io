@@ -5,7 +5,7 @@ export default function Hero() {
   const wallApps = [
     ...apps.filter(app => app.feature),
     ...['solo-level-up', 'sudoku-master', 'kiddoz'].map(id => apps.find(app => app.id === id)),
-  ].filter(Boolean)
+  ].filter(Boolean).slice(0, 6)
 
   return (
     <section id="top" className="hero">
@@ -14,7 +14,7 @@ export default function Hero() {
         <div>
           <p className="badge in" style={{ '--d': '0s' }}>
             <span className="pill-new">NEW</span>
-            Arrows, Block Blast Odyssey &amp; Crossword are out
+            Arrows 3D, Block Blast Odyssey &amp; Crossword are out
           </p>
           <h1 className="disp h1 in" style={{ '--d': '.06s' }}>
             Little games and apps you’ll open <span className="mark">every day.</span>

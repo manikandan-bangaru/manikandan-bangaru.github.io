@@ -38,6 +38,25 @@ export const apps = [
     }
   },
   {
+    id: 'arrows-3d',
+    title: 'Arrows 3D - Tap Away Puzzle',
+    category: 'Puzzle Games',
+    shortDescription: 'Tap arrows off spinning 3D shapes in the right order. Endless brain puzzles!',
+    seoKeywords: 'Arrows 3D, 3D Arrow Puzzle, Tap Away Puzzle 3D, 3D Cube Puzzle Game, Arrow Escape 3D, Offline Brain Teaser, Space Puzzle Game',
+    fullDescription: 'Arrows 3D is a calm, clever 3D puzzle game set in deep space. Spin a shape covered in arrows and tap each one to slide it off, but only when its path is clear. Defuse bomb arrows before they hit zero and travel through four space sectors of endless, always-solvable puzzles.',
+    image: 'images/apps/arrows_3d.png',
+    rating: 'New',
+    downloads: 'New',
+    packageId: 'com.magiban.org.arrows3d',
+    feature: 'images/apps/feature/arrows_3d.jpg',
+    features: ['Rotate Shapes in 3D', 'Endless Solvable Levels', 'Bomb Countdown Arrows', 'Offline Play'],
+    links: {
+      play: 'https://play.google.com/store/apps/details?id=com.magiban.org.arrows3d',
+      samsung: '',
+      appstore: ''
+    }
+  },
+  {
     id: 'arrows',
     title: 'Arrows - Puzzle Escape',
     category: 'Puzzle Games',
@@ -48,7 +67,6 @@ export const apps = [
     rating: 'New',
     downloads: 'New',
     packageId: 'com.magiban.org.arrows.puzzle',
-    feature: 'images/apps/feature/arrows.jpg',
     features: ['Endless Solvable Levels', 'Bomb Countdown Arrows', 'Light & Dark Modes', 'Offline Play'],
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.arrows.puzzle',
