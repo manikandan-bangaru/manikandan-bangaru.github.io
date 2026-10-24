@@ -1,5 +1,100 @@
 export const apps = [
   {
+    id: 'knot-puzzle-3d',
+    title: 'Knot Puzzle 3D: Tangle Odyssey',
+    category: 'Puzzle Games',
+    shortDescription: 'Untangle 3D ropes: lift the top rope first. 2000+ knot puzzles, play offline!',
+    seoKeywords: 'Knot Puzzle 3D, Tangle Odyssey, Rope Untangle Puzzle, Knot Game, 3D Rope Puzzle, Offline Brain Teaser',
+    fullDescription: 'Knot Puzzle 3D: Tangle Odyssey is a rope untangle puzzle with real 3D ropes that hang, sway and drape over each other. Move the ends between the pegs until no rope crosses another. 2000+ solvable levels, a daily knot, a Knot Atlas to collect, and no timers, all playable offline.',
+    image: 'images/apps/knot_puzzle.png',
+    rating: 'New',
+    downloads: 'New',
+    packageId: 'com.magiban.org.knot.puzzle',
+    feature: 'images/apps/feature/knot_puzzle.jpg',
+    features: ['Real 3D Ropes', '2000+ Solvable Levels', 'Daily Knot', 'Offline Play'],
+    links: {
+      play: 'https://play.google.com/store/apps/details?id=com.magiban.org.knot.puzzle',
+      samsung: '',
+      appstore: ''
+    }
+  },
+  {
+    id: 'screw-pop-pals',
+    title: 'Screw Pop Pals: Bolt Puzzle',
+    category: 'Puzzle Games',
+    shortDescription: 'Unscrew bolts, sort screws by color and rescue cute animals. 1000+ levels!',
+    seoKeywords: 'Screw Pop Pals, Screw Puzzle, Nuts and Bolts Puzzle, Screw Sort Game, Pin Puzzle, Cute Animal Puzzle',
+    fullDescription: 'Screw Pop Pals: Bolt Puzzle is a colorful screw puzzle: unscrew the bolts, sort each screw into the box of its color, and watch the plates fall away to free a cute animal Pal. 1000+ solvable levels, 48 Pals to collect, boss levels and a Daily Pop, all playable offline.',
+    image: 'images/apps/screw_pop_pals.png',
+    rating: 'New',
+    downloads: 'New',
+    packageId: 'com.magiban.org.screw.pop.puzzle',
+    feature: 'images/apps/feature/screw_pop_pals.jpg',
+    features: ['Sort Screws by Color', 'Free 48 Cute Pals', '1000+ Solvable Levels', 'Offline Play'],
+    links: {
+      play: 'https://play.google.com/store/apps/details?id=com.magiban.org.screw.pop.puzzle',
+      samsung: '',
+      appstore: ''
+    }
+  },
+  {
+    id: 'water-sort',
+    title: 'Water Sort Puzzle - Pour&Bloom',
+    category: 'Puzzle Games',
+    shortDescription: 'Relaxing water color sort puzzle: pour liquids, 2000+ levels, play offline!',
+    seoKeywords: 'Water Sort Puzzle, Pour and Bloom, Color Sort Game, Liquid Sort Puzzle, Bottle Sort, Relaxing Puzzle',
+    fullDescription: 'Water Sort Puzzle - Pour and Bloom is a calm color sort game: pour colored water between glass tubes until every tube holds a single color. 2000+ solvable levels, mystery colors, a daily pour and a garden that blooms as you play, with no timer and offline play.',
+    image: 'images/apps/water_sort.png',
+    rating: 'New',
+    downloads: 'New',
+    packageId: 'com.magiban.org.water.sort',
+    feature: 'images/apps/feature/water_sort.jpg',
+    features: ['Relaxing Color Sort', 'Grow a Garden', 'Daily Pour', 'Offline Play'],
+    links: {
+      play: 'https://play.google.com/store/apps/details?id=com.magiban.org.water.sort',
+      samsung: '',
+      appstore: ''
+    }
+  },
+  {
+    id: 'math-crossword',
+    title: 'Math Crossword: Number Puzzle',
+    category: 'Puzzle Games',
+    shortDescription: 'Fill the grid so every sum is true! Brain-training math puzzles, offline & daily.',
+    seoKeywords: 'Math Crossword, Number Puzzle, Math Puzzle Game, Equation Crossword, Brain Training Math, Daily Math Puzzle',
+    fullDescription: 'Math Crossword is a number puzzle that plays like a crossword, with equations instead of clues. Drop number tiles into the grid so every line across and down is true. Every puzzle has one logical solution, levels grow with you, and there is a daily puzzle, all playable offline.',
+    image: 'images/apps/math_crossword.png',
+    rating: 'New',
+    downloads: 'New',
+    packageId: 'com.magiban.org.math.crossword',
+    feature: 'images/apps/feature/math_crossword.jpg',
+    features: ['Equation Crossword', 'One Logical Solution', 'Daily Puzzle', 'Offline Play'],
+    links: {
+      play: 'https://play.google.com/store/apps/details?id=com.magiban.org.math.crossword',
+      samsung: '',
+      appstore: ''
+    }
+  },
+  {
+    id: 'arrows-3d',
+    title: 'Arrows 3D - Tap Away Puzzle',
+    category: 'Puzzle Games',
+    shortDescription: 'Tap arrows off spinning 3D shapes in the right order. Endless brain puzzles!',
+    seoKeywords: 'Arrows 3D, 3D Arrow Puzzle, Tap Away Puzzle 3D, 3D Cube Puzzle Game, Arrow Escape 3D, Offline Brain Teaser, Space Puzzle Game',
+    fullDescription: 'Arrows 3D is a calm, clever 3D puzzle game set in deep space. Spin a shape covered in arrows and tap each one to slide it off, but only when its path is clear. Defuse bomb arrows before they hit zero and travel through four space sectors of endless, always-solvable puzzles.',
+    image: 'images/apps/arrows_3d.png',
+    rating: 'New',
+    downloads: 'New',
+    packageId: 'com.magiban.org.arrows3d',
+    feature: 'images/apps/feature/arrows_3d.jpg',
+    features: ['Rotate Shapes in 3D', 'Endless Solvable Levels', 'Bomb Countdown Arrows', 'Offline Play'],
+    links: {
+      play: 'https://play.google.com/store/apps/details?id=com.magiban.org.arrows3d',
+      samsung: '',
+      appstore: ''
+    }
+  },
+  {
     id: 'block-blast-odyssey',
     title: 'Block Blast Odyssey: Puzzle',
     category: 'Puzzle Games',
@@ -33,25 +128,6 @@ export const apps = [
     features: ['Swipe Letter Wheel', 'Daily Crossword', 'Learn Word Meanings', 'Offline Play'],
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.crossword',
-      samsung: '',
-      appstore: ''
-    }
-  },
-  {
-    id: 'arrows-3d',
-    title: 'Arrows 3D - Tap Away Puzzle',
-    category: 'Puzzle Games',
-    shortDescription: 'Tap arrows off spinning 3D shapes in the right order. Endless brain puzzles!',
-    seoKeywords: 'Arrows 3D, 3D Arrow Puzzle, Tap Away Puzzle 3D, 3D Cube Puzzle Game, Arrow Escape 3D, Offline Brain Teaser, Space Puzzle Game',
-    fullDescription: 'Arrows 3D is a calm, clever 3D puzzle game set in deep space. Spin a shape covered in arrows and tap each one to slide it off, but only when its path is clear. Defuse bomb arrows before they hit zero and travel through four space sectors of endless, always-solvable puzzles.',
-    image: 'images/apps/arrows_3d.png',
-    rating: 'New',
-    downloads: 'New',
-    packageId: 'com.magiban.org.arrows3d',
-    feature: 'images/apps/feature/arrows_3d.jpg',
-    features: ['Rotate Shapes in 3D', 'Endless Solvable Levels', 'Bomb Countdown Arrows', 'Offline Play'],
-    links: {
-      play: 'https://play.google.com/store/apps/details?id=com.magiban.org.arrows3d',
       samsung: '',
       appstore: ''
     }

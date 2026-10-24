@@ -14,7 +14,7 @@ export default function Hero() {
         <div>
           <p className="badge in" style={{ '--d': '0s' }}>
             <span className="pill-new">NEW</span>
-            Arrows 3D, Block Blast Odyssey &amp; Crossword are out
+            Knot Puzzle 3D, Screw Pop Pals, Water Sort &amp; Math Crossword are out
           </p>
           <h1 className="disp h1 in" style={{ '--d': '.06s' }}>
             Little games and apps you’ll open <span className="mark">every day.</span>
