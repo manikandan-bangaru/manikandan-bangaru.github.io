@@ -1,5 +1,24 @@
 export const apps = [
   {
+    id: 'tile-match-puzzle',
+    title: 'Tile Match Puzzle',
+    category: 'Puzzle Games',
+    shortDescription: 'Relaxing triple tile match puzzle: match 3 tiles, 1500+ levels, play offline!',
+    seoKeywords: 'Tile Match Puzzle, Triple Tile Match, Match 3 Tiles, Tile Matching Game, Mahjong Style Puzzle, Offline Brain Game',
+    fullDescription: 'Tile Match Puzzle is a relaxing triple tile match game: tap tiles into your tray, match 3 of a kind to clear them and empty the board before the tray fills. 1500+ solvable levels across Paris, Cairo, Kyoto, Rio and more, with Combo Fever, a Hot Streak, special tiles, postcards to collect and a Daily Mandala, all playable offline.',
+    image: 'images/apps/tile_match.png',
+    rating: 'New',
+    downloads: 'New',
+    packageId: 'com.magiban.org.tile.match',
+    feature: 'images/apps/feature/tile_match.jpg',
+    features: ['Match 3 Tiles', '1500+ Solvable Levels', 'Collect Postcards', 'Offline Play'],
+    links: {
+      play: 'https://play.google.com/store/apps/details?id=com.magiban.org.tile.match',
+      samsung: '',
+      appstore: ''
+    }
+  },
+  {
     id: 'knot-puzzle-3d',
     title: 'Knot Puzzle 3D: Tangle Odyssey',
     category: 'Puzzle Games',
