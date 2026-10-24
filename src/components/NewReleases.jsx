@@ -2,7 +2,8 @@ import { apps } from '../data/apps'
 import { PlayIcon, GalaxyIcon } from './Icons'
 
 export default function NewReleases() {
-  const newApps = apps.filter(app => app.feature)
+  // The six newest games (apps are listed newest first)
+  const newApps = apps.filter(app => app.feature).slice(0, 6)
 
   return (
     <section id="new" className="sec">
@@ -10,7 +11,7 @@ export default function NewReleases() {
         <div className="sec-head reveal">
           <div>
             <p className="eyebrow">JUST RELEASED</p>
-            <h2 className="disp h2">Three new puzzles this month</h2>
+            <h2 className="disp h2">Six new puzzles this month</h2>
           </div>
           <p>Relaxing, offline, and free to play. Start with whichever one fits your mood.</p>
         </div>
