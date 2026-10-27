@@ -14,7 +14,7 @@ export default function Hero() {
         <div>
           <p className="badge in" style={{ '--d': '0s' }}>
             <span className="pill-new">NEW</span>
-            Tile Match Puzzle is out, with Knot Puzzle 3D &amp; Water Sort
+            Maze Worlds is out, with Tile Match Puzzle &amp; Knot Puzzle 3D
           </p>
           <h1 className="disp h1 in" style={{ '--d': '.06s' }}>
             Little games and apps you’ll open <span className="mark">every day.</span>

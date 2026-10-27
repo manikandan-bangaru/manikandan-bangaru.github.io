@@ -1,5 +1,24 @@
 export const apps = [
   {
+    id: 'maze-worlds',
+    title: 'Maze Worlds: Labyrinth Puzzle',
+    category: 'Puzzle Games',
+    shortDescription: 'Solve real mazes in 12 worlds: circles, hexagons, 3D cubes. Offline, no timers.',
+    seoKeywords: 'Maze Worlds, Labyrinth Puzzle, Maze Game, Maze Puzzle, Circular Maze, Hexagon Maze, 3D Maze, Offline Brain Game',
+    fullDescription: 'Maze Worlds is a real maze-solving game: trace the glowing orb through the corridors, or flick to glide to the next fork, and reach the exit star. Travel 12 themed worlds, each with its own maze shape: classic grids, garden hearts and stars, neon portals, keys and doors, hexagons, dark temples, circular orbits, a 3D cube, bridges, one-way gates, colour gates and multi-floor towers. Collect hidden gems for stars, play a daily maze, all offline with no timers.',
+    image: 'images/apps/maze_worlds.png',
+    rating: 'New',
+    downloads: 'New',
+    packageId: 'com.magiban.org.maze.worlds',
+    feature: 'images/apps/feature/maze_worlds.jpg',
+    features: ['12 Maze Worlds', 'Circles, Hexagons & 3D Cubes', 'Daily Maze', 'Offline Play'],
+    links: {
+      play: 'https://play.google.com/store/apps/details?id=com.magiban.org.maze.worlds',
+      samsung: '',
+      appstore: ''
+    }
+  },
+  {
     id: 'tile-match-puzzle',
     title: 'Tile Match Puzzle',
     category: 'Puzzle Games',
