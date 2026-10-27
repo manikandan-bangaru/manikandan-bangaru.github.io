@@ -14,8 +14,8 @@ export const SITE_CONFIG = {
     subtitle: 'Crafting cutting-edge mobile applications, gamified RPG workout trackers, and top-rated puzzle games that transform daily digital experiences.'
   },
   meta: {
-    title: 'Magiban Technologies | Solo Level Up Fitness App & Mobile Puzzle Games Studio',
-    description: 'Magiban Technologies is a leading mobile application developer crafting high-converting Android & iOS apps including Word Search Atlas, Maze Worlds: Labyrinth Puzzle, Tile Match Puzzle, Solo Level Up: System Fitness RPG workout tracker, Arrows 3D - Tap Away Puzzle, Arrows - Puzzle Escape, Kiddoz Early Learning & Stories, Brain Puzzle Quest, Sudoku Master, and Habit Tracker: Atmos Sphere.',
-    keywords: 'Magiban Technologies, Magiban, Word Search Atlas, Word Search Puzzle, Maze Worlds, Labyrinth Puzzle, Maze Game, Tile Match Puzzle, Triple Tile Match, Arrows 3D, 3D Arrow Puzzle, Tap Away Puzzle, Arrows Puzzle Escape, Solo Level Up System Fitness, Kiddoz Early Learning, Kids Offline Stories, RPG Workout App, Solo Leveling Fitness, Brain Puzzle Quest, Sudoku Master, Classic 2048, Bomb Hunt Minesweeper, Habit Tracker Atmos Sphere, My Student Organizer, Mobile Games India, Android Apps Studio'
+    title: 'Magiban Technologies | Offline Puzzle Games, Fitness RPG & Habit Apps',
+    description: 'Magiban Technologies is an indie mobile studio making offline puzzle games and apps: Word Search Atlas, Maze Game: Labyrinth Worlds, Tile Match Puzzle: Voyage, Water Sort Puzzle: Pour Bloom, Untangle Rope 3D: Knot Odyssey, Screw Sort Puzzle: Pop Pals, Block Puzzle: Jewel Odyssey, Crossword Puzzles: Letter Trek, Sudoku Puzzle: Crown Classic, Minesweeper Classic: Bomb Hunt, Fitness RPG: SystemFit Workout and Habit Tracker & Routine: Atmos.',
+    keywords: 'Magiban Technologies, Magiban, word search atlas, word search puzzle, maze game, labyrinth puzzle, tile match puzzle, triple tile match, water sort puzzle, color sort, untangle rope, knot puzzle, screw sort puzzle, nuts and bolts, block puzzle, jewel block puzzle, crossword puzzles, word connect, math crossword, arrow puzzle, arrows 3D puzzle, sudoku puzzle, minesweeper classic, sliding puzzle, falling block puzzle, math games, brain games, kids learning games, fitness RPG, workout tracker, habit tracker, routine planner, offline puzzle games, mobile games India'
   }
 };
