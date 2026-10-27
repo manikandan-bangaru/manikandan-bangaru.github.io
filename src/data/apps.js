@@ -1,5 +1,24 @@
 export const apps = [
   {
+    id: 'word-search-atlas',
+    title: 'Word Search Atlas: Word Game',
+    category: 'Puzzle Games',
+    shortDescription: 'Word search puzzles by theme: find hidden words and reveal secret city facts.',
+    seoKeywords: 'Word Search Atlas, Word Search, Word Search Puzzle, Word Game, Find Hidden Words, Word Find, Vocabulary Game, Offline Word Game',
+    fullDescription: 'Word Search Atlas is a relaxing word search game with themed puzzles that never run out. Swipe to find hidden words, and the letters you don\'t use spell a true fact about the city you are visiting. Travel from Lisbon to Kyoto and Cusco, learn the meaning of every word you find, spot treasure words, solve Clue Hunt levels and play a new Daily Trail every day, all offline.',
+    image: 'images/apps/word_search_atlas.png',
+    rating: 'New',
+    downloads: 'New',
+    packageId: 'com.magiban.org.word.search',
+    feature: 'images/apps/feature/word_search_atlas.jpg',
+    features: ['Endless Themed Puzzles', 'Secret City Facts', 'Learn Every Word', 'Offline Play'],
+    links: {
+      play: 'https://play.google.com/store/apps/details?id=com.magiban.org.word.search',
+      samsung: '',
+      appstore: ''
+    }
+  },
+  {
     id: 'maze-worlds',
     title: 'Maze Game: Labyrinth Worlds',
     category: 'Puzzle Games',
