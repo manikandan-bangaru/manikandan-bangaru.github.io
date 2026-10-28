@@ -1,5 +1,24 @@
 export const apps = [
   {
+    id: 'car-parking-jam',
+    title: 'Car Parking Jam: Valet Rush',
+    category: 'Puzzle Games',
+    shortDescription: 'Parking jam puzzle in 3D: unblock cars, beat the traffic jam. No timers.',
+    seoKeywords: 'Car Parking Jam, Parking Jam, Car Parking Game, Parking Puzzle, Traffic Jam Puzzle, Car Out, Unblock Car, 3D Car Puzzle, Offline Puzzle Game',
+    fullDescription: 'Car Parking Jam: Valet Rush is a 3D parking jam puzzle. Tap a car to drive it out of the packed lot, but plan first: walls, bollards and toll gates block the way, and every move counts. Clear endless city lots from sunset streets to snowy nights, earn three stars, use a hint or tow when you are stuck, and play offline with no timers.',
+    image: 'images/apps/car_parking_jam.png',
+    rating: 'New',
+    downloads: 'New',
+    packageId: 'com.magiban.org.car.parking',
+    feature: 'images/apps/feature/car_parking_jam.jpg',
+    features: ['Endless 3D Parking Lots', 'Walls & Toll Gates', 'Realistic Cars', 'Offline, No Timers'],
+    links: {
+      play: 'https://play.google.com/store/apps/details?id=com.magiban.org.car.parking',
+      samsung: '',
+      appstore: ''
+    }
+  },
+  {
     id: 'word-search-atlas',
     title: 'Word Search Atlas: Word Game',
     category: 'Puzzle Games',

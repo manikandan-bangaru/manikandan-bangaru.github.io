@@ -14,7 +14,7 @@ export default function Hero() {
         <div>
           <p className="badge in" style={{ '--d': '0s' }}>
             <span className="pill-new">NEW</span>
-            Word Search Atlas is out, plus fresh names: Maze Game &amp; Water Sort Puzzle
+            Car Parking Jam: Valet Rush is out, with Word Search Atlas &amp; Maze Game
           </p>
           <h1 className="disp h1 in" style={{ '--d': '.06s' }}>
             Little games and apps you’ll open <span className="mark">every day.</span>
