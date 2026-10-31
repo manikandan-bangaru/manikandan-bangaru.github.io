@@ -14,7 +14,7 @@ export default function Hero() {
         <div>
           <p className="badge in" style={{ '--d': '0s' }}>
             <span className="pill-new">NEW</span>
-            Car Parking Jam: Valet Rush is out, with Word Search Atlas &amp; Maze Game
+            Prism Panes is out: a brand-new color mix puzzle, plus Car Parking Jam
           </p>
           <h1 className="disp h1 in" style={{ '--d': '.06s' }}>
             Little games and apps you’ll open <span className="mark">every day.</span>

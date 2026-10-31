@@ -1,5 +1,24 @@
 export const apps = [
   {
+    id: 'prism-panes',
+    title: 'Color Mix Puzzle: Prism Panes',
+    category: 'Puzzle Games',
+    shortDescription: 'Color puzzle game: overlap stained glass panes to mix new colors. No timers.',
+    seoKeywords: 'Color Mix Puzzle, Color Mixing Game, Stained Glass Puzzle, Color Puzzle Game, Glass Puzzle, Mosaic Puzzle, Logic Puzzle, Brain Game, Offline Puzzle Game',
+    fullDescription: 'Prism Panes is a color mix puzzle made of stained glass. Drag see-through glass panes onto a window and watch the colors blend where they overlap: red and yellow make orange, yellow and blue make green, red and blue make purple, and all three glow amber. Fill every cell with its target color to light up the window. 500 tested levels, then endless new ones, with sun gems, frosted glass, ice cells and shaped windows. No timers, play offline.',
+    image: 'images/apps/prism_panes.png',
+    rating: 'New',
+    downloads: 'New',
+    packageId: 'com.magiban.org.prism.panes',
+    feature: 'images/apps/feature/prism_panes.jpg',
+    features: ['Overlap Glass to Mix Colors', 'Endless Stained Glass Levels', 'Daily Window & Streaks', 'Offline, No Timers'],
+    links: {
+      play: 'https://play.google.com/store/apps/details?id=com.magiban.org.prism.panes',
+      samsung: '',
+      appstore: ''
+    }
+  },
+  {
     id: 'car-parking-jam',
     title: 'Car Parking Jam: Valet Rush',
     category: 'Puzzle Games',
