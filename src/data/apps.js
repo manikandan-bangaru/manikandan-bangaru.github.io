@@ -38,6 +38,44 @@ export const apps = [
     }
   },
   {
+    id: 'connect-dots-glow-link',
+    title: 'Connect the Dots: Glow Link',
+    category: 'Puzzle Games',
+    shortDescription: 'Connect the dots and fill the board: a glowing line puzzle dots game. Play offline.',
+    seoKeywords: 'Connect the Dots, Dot Link, Line Puzzle, Number Link, Dots Game, Flow Puzzle, Glow Puzzle, Brain Game, Offline Puzzle Game',
+    fullDescription: 'Connect the Dots: Glow Link is a glowing line puzzle. Drag a line between every pair of matching dots, never let lines cross, and fill every cell of the board. Every level has exactly one solution, a new idea arrives every 10 levels (walls, bridges, warps, ice, hexagon boards), and boss levels paint pixel-art mosaics across ten glowing worlds. Daily puzzles, streaks and Zen mode, no timers, play offline.',
+    image: 'images/apps/connect_dots.png',
+    rating: 'New',
+    downloads: 'New',
+    packageId: 'com.magiban.org.connect.dots',
+    feature: 'images/apps/feature/connect_dots.jpg',
+    features: ['One-Solution Line Puzzles', 'Ten Glowing Worlds', 'Daily Puzzles & Streaks', 'Offline, No Timers'],
+    links: {
+      play: 'https://play.google.com/store/apps/details?id=com.magiban.org.connect.dots',
+      samsung: '',
+      appstore: ''
+    }
+  },
+  {
+    id: 'cupboard-sort',
+    title: 'Cupboard Sort: Goods Match 3D',
+    category: 'Puzzle Games',
+    shortDescription: 'Sort goods on 3D shelves and match 3 in a cosy cupboard sort puzzle. Play offline.',
+    seoKeywords: 'Cupboard Sort, Goods Sort, Triple Match, Match 3D, Shelf Sorting, Sort Puzzle, Goods Match, Sorting Game, Offline Puzzle Game',
+    fullDescription: 'Cupboard Sort: Goods Match 3D is a calm goods sort puzzle. Tap a jar, a can or a box and drop it on the right shelf; line up three of the same goods and they clear with a satisfying clink. 3,000 solver-checked levels with hidden back rows, padlocks, frozen goods, conveyor belts and more. Restock your shop rooms, fill the goods album and play the Daily Shelf. Play offline.',
+    image: 'images/apps/cupboard_sort.png',
+    rating: 'New',
+    downloads: 'New',
+    packageId: 'com.magiban.org.cupboard.sort',
+    feature: 'images/apps/feature/cupboard_sort.jpg',
+    features: ['3,000 Solvable Levels', 'Real 3D Goods', 'Restock Your Shop', 'Offline Sorting Puzzle'],
+    links: {
+      play: 'https://play.google.com/store/apps/details?id=com.magiban.org.cupboard.sort',
+      samsung: '',
+      appstore: ''
+    }
+  },
+  {
     id: 'car-parking-jam',
     title: 'Car Parking Jam: Valet Rush',
     category: 'Puzzle Games',
