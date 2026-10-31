@@ -1,5 +1,24 @@
 export const apps = [
   {
+    id: 'pixel-band',
+    title: 'Color Shooter: Pixel Band',
+    category: 'Puzzle Games',
+    shortDescription: 'Color shooter puzzle where every hit is a note. Offline, no lives, fair levels.',
+    seoKeywords: 'Color Shooter, Pixel Shooter, Color Shooter Puzzle, Music Puzzle, Pixel Art Puzzle, Color Sort Game, Conveyor Puzzle, Brain Game, Offline Puzzle Game',
+    fullDescription: 'Color Shooter: Pixel Band is a color shooter puzzle where every hit is a note. Tap a band member to send it round the conveyor belt; it shoots every outside cube of its own color and each hit plays a note. Fill every seat and the show stops, clear the pixel picture and its song plays in full. Eight instrument creatures, thousands of levels proven solvable, endless new ones made on your phone, Song of the Day and a Jukebox album. No lives, no timers, play offline.',
+    image: 'images/apps/pixel_band.png',
+    rating: 'New',
+    downloads: 'New',
+    packageId: 'com.magiban.org.pixel.band',
+    feature: 'images/apps/feature/pixel_band.jpg',
+    features: ['Every Hit Plays a Note', 'Thousands of Fair Levels', 'Song of the Day & Streaks', 'Offline, No Lives or Timers'],
+    links: {
+      play: 'https://play.google.com/store/apps/details?id=com.magiban.org.pixel.band',
+      samsung: '',
+      appstore: ''
+    }
+  },
+  {
     id: 'prism-panes',
     title: 'Color Mix Puzzle: Prism Panes',
     category: 'Puzzle Games',

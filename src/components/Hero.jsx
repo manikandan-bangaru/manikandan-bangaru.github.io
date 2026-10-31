@@ -14,7 +14,7 @@ export default function Hero() {
         <div>
           <p className="badge in" style={{ '--d': '0s' }}>
             <span className="pill-new">NEW</span>
-            Prism Panes is out: a brand-new color mix puzzle, plus Car Parking Jam
+            Pixel Band is out: a color shooter where every hit is a note, plus Prism Panes
           </p>
           <h1 className="disp h1 in" style={{ '--d': '.06s' }}>
             Little games and apps you’ll open <span className="mark">every day.</span>
