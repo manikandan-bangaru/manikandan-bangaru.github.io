@@ -168,6 +168,7 @@ h1, h2, h3, p { margin: 0; }
 .list { margin: 0 0 14px; padding: 0; list-style: none; display: grid; gap: 10px; }
 .list li { display: flex; gap: 12px; font-size: 15px; line-height: 1.65; color: #BDB9B0; }
 .list li::before { content: ""; flex: none; width: 6px; height: 6px; margin-top: 10px; border-radius: 99px; background: var(--accent); }
+.pp-link { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
 .pp-mail { margin-top: 6px; min-height: 52px; padding: 0 24px; font-size: 16px; }
 
 /* ---------- responsive ---------- */

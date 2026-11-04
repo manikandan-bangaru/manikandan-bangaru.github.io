@@ -1,7 +1,7 @@
 import { Logo, BackIcon } from './Icons'
 import { SITE_CONFIG } from '../constants/siteConfig'
 
-export default function Header({ isPrivacy }) {
+export default function Header({ legalPage }) {
   return (
     <header className="header">
       <div className="wrap header-in">
@@ -9,10 +9,11 @@ export default function Header({ isPrivacy }) {
           <Logo />
           <span className="brand-name">Magiban <span>Technologies</span></span>
         </a>
-        {isPrivacy ? (
+        {legalPage ? (
           <nav className="nav" aria-label="Main">
             <a href="/#apps" className="hide-s">Apps</a>
-            <a href="/policy.html" className="hide-s" aria-current="page">Privacy</a>
+            <a href="/policy.html" className="hide-s" aria-current={legalPage === 'privacy' ? 'page' : undefined}>Privacy</a>
+            <a href="/termsOfService.html" className="hide-s" aria-current={legalPage === 'terms' ? 'page' : undefined}>Terms</a>
             <a href="/" className="btn btn-ghost btn-back"><BackIcon />Back to apps</a>
           </nav>
         ) : (

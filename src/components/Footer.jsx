@@ -8,6 +8,7 @@ export default function Footer() {
         <nav aria-label="Footer">
           <a href="/#apps">Apps</a>
           <a href="/policy.html">Privacy Policy</a>
+          <a href="/termsOfService.html">Terms of Service</a>
           <a href={`mailto:${SITE_CONFIG.supportEmail}`}>Contact</a>
         </nav>
       </div>
