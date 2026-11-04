@@ -10,10 +10,11 @@ export default defineConfig({
     outDir: 'dist',
     emptyOutDir: true,
     rollupOptions: {
-      // policy.html is a second entry so /policy.html serves the same React app
+      // policy.html and termsOfService.html are extra entries so they serve the same React app
       input: {
         main: resolve(__dirname, 'index.html'),
         policy: resolve(__dirname, 'policy.html'),
+        terms: resolve(__dirname, 'termsOfService.html'),
       },
     },
   }
