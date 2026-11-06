@@ -19,11 +19,13 @@ export const BackIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" /></svg>
 )
 
-export const Logo = () => (
-  <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
-    <rect x="2" y="2" width="14" height="14" rx="4" fill="var(--accent)" />
-    <rect x="18" y="2" width="14" height="14" rx="4" fill="#F4F1EA" opacity=".9" />
-    <rect x="2" y="18" width="14" height="14" rx="4" fill="#F4F1EA" opacity=".9" />
-    <rect x="18" y="18" width="14" height="14" rx="7" fill="var(--accent)" />
+// Magiban Spin Top mark (P7 Line Top, small-size cut for dark grounds). Masters: Drive Brand-Logo-2026/svg.
+export const Logo = ({ size = 34 }) => (
+  <svg width={size} height={size} viewBox="0 0 200 200" aria-hidden="true">
+    <path d="M100 172 V190" stroke="#FF5C8A" strokeWidth="13" strokeLinecap="round" />
+    <rect x="88" y="30" width="24" height="34" rx="8" fill="#FFC94D" />
+    <path d="M100 178 L36 108 Q26 94 40 84 L62 70 Q100 58 138 70 L160 84 Q174 94 164 108 Z" fill="none" stroke="#FF5C8A" strokeWidth="16" strokeLinejoin="round" />
+    <path d="M66 116 V90 L100 118 L134 90 V116" fill="none" stroke="#FF5C8A" strokeWidth="18" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M14 112 A86 22 0 0 0 186 112" fill="none" stroke="#2EE6FF" strokeWidth="12" strokeLinecap="round" />
   </svg>
 )
