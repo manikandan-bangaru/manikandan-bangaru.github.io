@@ -447,24 +447,6 @@ export const apps = [
     }
   },
   {
-    id: 'my-student-organizer',
-    title: 'My Student Organizer',
-    category: 'Education',
-    shortDescription: 'Manage class timetables, homework assignments, and academic grades efficiently.',
-    seoKeywords: 'My Student Organizer, School Timetable App, Grade Calculator, Homework Planner',
-    fullDescription: 'My Student Organizer is an essential academic companion for students. Easily organize class schedules, calculate GPA, track assignment deadlines, and stay on top of school work.',
-    image: 'images/apps/mystudentApp.png',
-    rating: '4.7',
-    downloads: '4,000+',
-    packageId: 'com.magiban.org.studentapp',
-    features: ['Interactive Timetable', 'GPA Grade Calc', 'Assignment Reminders', 'Clean UI'],
-    links: {
-      play: 'https://play.google.com/store/apps/details?id=com.magiban.org.studentapp',
-      samsung: 'https://apps.samsung.com/appquery/appDetail.as?appId=com.magiban.org.studentapp',
-      appstore: ''
-    }
-  },
-  {
     id: 'shadow-block-stack',
     title: 'Falling Block Puzzle: Shadow',
     category: 'Puzzle Games',
