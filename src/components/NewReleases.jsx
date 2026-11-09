@@ -1,5 +1,5 @@
 import { apps } from '../data/apps'
-import { PlayIcon, GalaxyIcon } from './Icons'
+import { PlayIcon, GalaxyIcon, AppleIcon } from './Icons'
 
 export default function NewReleases() {
   // The six newest games (apps are listed newest first)
@@ -28,6 +28,9 @@ export default function NewReleases() {
                 <div className="app-links">
                   {app.links.play && (
                     <a className="chip" href={app.links.play} target="_blank" rel="noopener noreferrer"><PlayIcon />Google Play</a>
+                  )}
+                  {app.links.appstore && (
+                    <a className="chip" href={app.links.appstore} target="_blank" rel="noopener noreferrer"><AppleIcon />App Store</a>
                   )}
                   {app.links.samsung && (
                     <a className="chip" href={app.links.samsung} target="_blank" rel="noopener noreferrer"><GalaxyIcon />Galaxy Store</a>

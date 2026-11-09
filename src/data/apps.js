@@ -15,7 +15,7 @@ export const apps = [
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.pixel.band',
       samsung: '',
-      appstore: ''
+      appstore: 'https://apps.apple.com/app/id6832075328'
     }
   },
   {
@@ -34,7 +34,7 @@ export const apps = [
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.prism.panes',
       samsung: '',
-      appstore: ''
+      appstore: 'https://apps.apple.com/app/id6832074385'
     }
   },
   {
@@ -53,7 +53,7 @@ export const apps = [
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.connect.dots',
       samsung: '',
-      appstore: ''
+      appstore: 'https://apps.apple.com/app/id6832075903'
     }
   },
   {
@@ -72,7 +72,7 @@ export const apps = [
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.cupboard.sort',
       samsung: '',
-      appstore: ''
+      appstore: 'https://apps.apple.com/app/id6832076366'
     }
   },
   {
@@ -91,7 +91,7 @@ export const apps = [
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.car.parking',
       samsung: '',
-      appstore: ''
+      appstore: 'https://apps.apple.com/app/id6832186549'
     }
   },
   {
@@ -110,7 +110,7 @@ export const apps = [
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.word.search',
       samsung: '',
-      appstore: ''
+      appstore: 'https://apps.apple.com/app/id6832190617'
     }
   },
   {
@@ -129,7 +129,7 @@ export const apps = [
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.maze.worlds',
       samsung: '',
-      appstore: ''
+      appstore: 'https://apps.apple.com/app/id6832073588'
     }
   },
   {
@@ -148,7 +148,7 @@ export const apps = [
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.tile.match',
       samsung: '',
-      appstore: ''
+      appstore: 'https://apps.apple.com/app/id6832053454'
     }
   },
   {
@@ -167,7 +167,7 @@ export const apps = [
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.knot.puzzle',
       samsung: '',
-      appstore: ''
+      appstore: 'https://apps.apple.com/app/id6832190731'
     }
   },
   {
@@ -186,7 +186,7 @@ export const apps = [
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.screw.pop.puzzle',
       samsung: '',
-      appstore: ''
+      appstore: 'https://apps.apple.com/app/id6832053230'
     }
   },
   {
@@ -205,7 +205,7 @@ export const apps = [
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.water.sort',
       samsung: '',
-      appstore: ''
+      appstore: 'https://apps.apple.com/app/id6832048569'
     }
   },
   {
@@ -224,7 +224,7 @@ export const apps = [
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.math.crossword',
       samsung: '',
-      appstore: ''
+      appstore: 'https://apps.apple.com/app/id6832052753'
     }
   },
   {
@@ -243,7 +243,7 @@ export const apps = [
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.arrows3d',
       samsung: '',
-      appstore: ''
+      appstore: 'https://apps.apple.com/app/id6832186177'
     }
   },
   {
@@ -262,7 +262,7 @@ export const apps = [
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.block.blast',
       samsung: '',
-      appstore: ''
+      appstore: 'https://apps.apple.com/app/id6832052704'
     }
   },
   {
@@ -281,7 +281,7 @@ export const apps = [
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.crossword',
       samsung: '',
-      appstore: ''
+      appstore: 'https://apps.apple.com/app/id6832052781'
     }
   },
   {
@@ -299,7 +299,7 @@ export const apps = [
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.arrows.puzzle',
       samsung: 'https://galaxystore.samsung.com/detail/com.magiban.org.arrows.puzzle',
-      appstore: ''
+      appstore: 'https://apps.apple.com/app/id6832186109'
     }
   },
   {
@@ -317,7 +317,7 @@ export const apps = [
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.systemfit',
       samsung: 'https://apps.samsung.com/appquery/appDetail.as?appId=com.magiban.org.systemfit',
-      appstore: ''
+      appstore: 'https://apps.apple.com/app/id6832052667'
     }
   },
   {
@@ -335,7 +335,7 @@ export const apps = [
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.classic_2048',
       samsung: 'https://apps.samsung.com/appquery/appDetail.as?appId=com.magiban.org.classic_2048',
-      appstore: ''
+      appstore: 'https://apps.apple.com/app/id6832185722'
     }
   },
   {
@@ -353,7 +353,7 @@ export const apps = [
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.brain_puzzle_quest',
       samsung: 'https://apps.samsung.com/appquery/appDetail.as?appId=com.magiban.org.brain_puzzle_quest',
-      appstore: ''
+      appstore: 'https://apps.apple.com/app/id6832188405'
     }
   },
   {
@@ -371,7 +371,7 @@ export const apps = [
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.sudoku',
       samsung: 'https://apps.samsung.com/appquery/appDetail.as?appId=com.magiban.org.sudoku',
-      appstore: ''
+      appstore: 'https://apps.apple.com/app/id6832189994'
     }
   },
   {
@@ -389,7 +389,7 @@ export const apps = [
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.bombhunt',
       samsung: 'https://apps.samsung.com/appquery/appDetail.as?appId=com.magiban.org.bombhunt',
-      appstore: ''
+      appstore: 'https://apps.apple.com/app/id6832188728'
     }
   },
   {
@@ -407,7 +407,7 @@ export const apps = [
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.sliding_puzzle',
       samsung: 'https://apps.samsung.com/appquery/appDetail.as?appId=com.magiban.org.sliding_puzzle',
-      appstore: ''
+      appstore: 'https://apps.apple.com/app/id6832189421'
     }
   },
   {
@@ -425,7 +425,7 @@ export const apps = [
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.habit_tracker',
       samsung: 'https://galaxystore.samsung.com/detail/com.magiban.org.habit_tracker',
-      appstore: ''
+      appstore: 'https://apps.apple.com/app/id6832187801'
     }
   },
   {
@@ -443,7 +443,7 @@ export const apps = [
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.kiddoz',
       samsung: '',
-      appstore: ''
+      appstore: 'https://apps.apple.com/app/id6832188106'
     }
   },
   {
@@ -461,7 +461,7 @@ export const apps = [
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.shadow_block_stack',
       samsung: 'https://galaxystore.samsung.com/detail/com.magiban.org.shadow_block_stack',
-      appstore: ''
+      appstore: 'https://apps.apple.com/app/id6832187338'
     }
   }
 ];
