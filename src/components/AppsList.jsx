@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { apps, categories } from '../data/apps'
-import { PlayIcon, GalaxyIcon, StarIcon } from './Icons'
+import { PlayIcon, GalaxyIcon, AppleIcon, StarIcon } from './Icons'
 
 export default function AppsList() {
   const [category, setCategory] = useState('All')
@@ -43,6 +43,11 @@ export default function AppsList() {
                     {app.links.play && (
                       <a className="chip" href={app.links.play} target="_blank" rel="noopener noreferrer" aria-label={`Get ${app.title} on Google Play`}>
                         <PlayIcon size={10} />Play
+                      </a>
+                    )}
+                    {app.links.appstore && (
+                      <a className="chip" href={app.links.appstore} target="_blank" rel="noopener noreferrer" aria-label={`Get ${app.title} on the App Store`}>
+                        <AppleIcon size={10} />App Store
                       </a>
                     )}
                     {app.links.samsung && (
