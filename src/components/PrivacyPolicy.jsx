@@ -1,3 +1,4 @@
+// Author: Magiban Technologies
 import { MailIcon } from './Icons'
 import { SITE_CONFIG } from '../constants/siteConfig'
 

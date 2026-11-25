@@ -1,3 +1,4 @@
+<!-- Author: Magiban Technologies -->
 # Magiban Technologies Pvt Ltd
 
 Modern, responsive website for Magiban Technologies Pvt Ltd - a leading mobile application development company.

@@ -1,3 +1,4 @@
+// Author: Magiban Technologies
 import { useEffect, useRef, useState } from 'react'
 
 export default function AdSenseBanner({ 

@@ -1,3 +1,4 @@
+// Author: Magiban Technologies
 export const apps = [
   {
     id: 'pixel-band',
@@ -14,7 +15,7 @@ export const apps = [
     features: ['Every Hit Plays a Note', 'Thousands of Fair Levels', 'Song of the Day & Streaks', 'Offline, No Lives or Timers'],
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.pixel.band',
-      samsung: '',
+      samsung: 'https://galaxystore.samsung.com/detail/com.magiban.org.pixel.band',
       appstore: 'https://apps.apple.com/app/id6832075328'
     }
   },
@@ -33,7 +34,7 @@ export const apps = [
     features: ['Overlap Glass to Mix Colors', 'Endless Stained Glass Levels', 'Daily Window & Streaks', 'Offline, No Timers'],
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.prism.panes',
-      samsung: '',
+      samsung: 'https://galaxystore.samsung.com/detail/com.magiban.org.prism.panes',
       appstore: 'https://apps.apple.com/app/id6832074385'
     }
   },
@@ -52,7 +53,7 @@ export const apps = [
     features: ['One-Solution Line Puzzles', 'Ten Glowing Worlds', 'Daily Puzzles & Streaks', 'Offline, No Timers'],
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.connect.dots',
-      samsung: '',
+      samsung: 'https://galaxystore.samsung.com/detail/com.magiban.org.connect.dots',
       appstore: 'https://apps.apple.com/app/id6832075903'
     }
   },
@@ -71,7 +72,7 @@ export const apps = [
     features: ['3,000 Solvable Levels', 'Real 3D Goods', 'Restock Your Shop', 'Offline Sorting Puzzle'],
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.cupboard.sort',
-      samsung: '',
+      samsung: 'https://galaxystore.samsung.com/detail/com.magiban.org.cupboard.sort',
       appstore: 'https://apps.apple.com/app/id6832076366'
     }
   },
@@ -90,7 +91,7 @@ export const apps = [
     features: ['Endless 3D Parking Lots', 'Walls & Toll Gates', 'Realistic Cars', 'Offline, No Timers'],
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.car.parking',
-      samsung: '',
+      samsung: 'https://galaxystore.samsung.com/detail/com.magiban.org.car.parking',
       appstore: 'https://apps.apple.com/app/id6832186549'
     }
   },
@@ -109,7 +110,7 @@ export const apps = [
     features: ['Endless Themed Puzzles', 'Secret City Facts', 'Learn Every Word', 'Offline Play'],
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.word.search',
-      samsung: '',
+      samsung: 'https://galaxystore.samsung.com/detail/com.magiban.org.word.search',
       appstore: 'https://apps.apple.com/app/id6832190617'
     }
   },
@@ -128,7 +129,7 @@ export const apps = [
     features: ['12 Maze Worlds', 'Circles, Hexagons & 3D Cubes', 'Daily Maze', 'Offline Play'],
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.maze.worlds',
-      samsung: '',
+      samsung: 'https://galaxystore.samsung.com/detail/com.magiban.org.maze.worlds',
       appstore: 'https://apps.apple.com/app/id6832073588'
     }
   },
@@ -147,7 +148,7 @@ export const apps = [
     features: ['Match 3 Tiles', '1500+ Solvable Levels', 'Collect Postcards', 'Offline Play'],
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.tile.match',
-      samsung: '',
+      samsung: 'https://galaxystore.samsung.com/detail/com.magiban.org.tile.match',
       appstore: 'https://apps.apple.com/app/id6832053454'
     }
   },
@@ -166,7 +167,7 @@ export const apps = [
     features: ['Real 3D Ropes', '2000+ Solvable Levels', 'Daily Knot', 'Offline Play'],
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.knot.puzzle',
-      samsung: '',
+      samsung: 'https://galaxystore.samsung.com/detail/com.magiban.org.knot.puzzle',
       appstore: 'https://apps.apple.com/app/id6832190731'
     }
   },
@@ -185,7 +186,7 @@ export const apps = [
     features: ['Sort Screws by Color', 'Free 48 Cute Pals', '1000+ Solvable Levels', 'Offline Play'],
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.screw.pop.puzzle',
-      samsung: '',
+      samsung: 'https://galaxystore.samsung.com/detail/com.magiban.org.screw.pop.puzzle',
       appstore: 'https://apps.apple.com/app/id6832053230'
     }
   },
@@ -204,7 +205,7 @@ export const apps = [
     features: ['Relaxing Color Sort', 'Grow a Garden', 'Daily Pour', 'Offline Play'],
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.water.sort',
-      samsung: '',
+      samsung: 'https://galaxystore.samsung.com/detail/com.magiban.org.water.sort',
       appstore: 'https://apps.apple.com/app/id6832048569'
     }
   },
@@ -223,7 +224,7 @@ export const apps = [
     features: ['Equation Crossword', 'One Logical Solution', 'Daily Puzzle', 'Offline Play'],
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.math.crossword',
-      samsung: '',
+      samsung: 'https://galaxystore.samsung.com/detail/com.magiban.org.math.crossword',
       appstore: 'https://apps.apple.com/app/id6832052753'
     }
   },
@@ -242,7 +243,7 @@ export const apps = [
     features: ['Rotate Shapes in 3D', 'Endless Solvable Levels', 'Bomb Countdown Arrows', 'Offline Play'],
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.arrows3d',
-      samsung: '',
+      samsung: 'https://galaxystore.samsung.com/detail/com.magiban.org.arrows3d',
       appstore: 'https://apps.apple.com/app/id6832186177'
     }
   },
@@ -280,7 +281,7 @@ export const apps = [
     features: ['Swipe Letter Wheel', 'Daily Crossword', 'Learn Word Meanings', 'Offline Play'],
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.crossword',
-      samsung: '',
+      samsung: 'https://galaxystore.samsung.com/detail/com.magiban.org.crossword',
       appstore: 'https://apps.apple.com/app/id6832052781'
     }
   },
@@ -442,7 +443,7 @@ export const apps = [
     features: ['1,000+ Offline Stories', 'Letter & Shape Tracing', 'Nursery Rhymes & Videos', 'Interactive Visual Dictionary'],
     links: {
       play: 'https://play.google.com/store/apps/details?id=com.magiban.org.kiddoz',
-      samsung: '',
+      samsung: 'https://galaxystore.samsung.com/detail/com.magiban.org.kiddoz',
       appstore: 'https://apps.apple.com/app/id6832188106'
     }
   },

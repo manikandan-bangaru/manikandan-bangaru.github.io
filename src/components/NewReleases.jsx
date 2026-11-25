@@ -1,3 +1,4 @@
+// Author: Magiban Technologies
 import { apps } from '../data/apps'
 import { PlayIcon, GalaxyIcon, AppleIcon } from './Icons'
 

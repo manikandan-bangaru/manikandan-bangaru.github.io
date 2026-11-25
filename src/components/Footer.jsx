@@ -1,3 +1,4 @@
+// Author: Magiban Technologies
 import { SITE_CONFIG } from '../constants/siteConfig'
 
 export default function Footer() {

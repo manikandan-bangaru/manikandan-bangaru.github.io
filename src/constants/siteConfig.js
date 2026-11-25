@@ -1,3 +1,4 @@
+// Author: Magiban Technologies
 export const SITE_CONFIG = {
   name: 'Magiban Technologies',
   fullName: 'Magiban Technologies',
