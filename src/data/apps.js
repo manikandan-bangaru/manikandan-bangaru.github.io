@@ -1,3 +1,4 @@
+// Author: Magiban Technologies
 export const apps = [
   {
     id: 'pixel-band',

@@ -1,3 +1,4 @@
+// Author: Magiban Technologies
 import { apps, categories } from '../data/apps'
 
 export default function Hero() {

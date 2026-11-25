@@ -1,3 +1,4 @@
+// Author: Magiban Technologies
 import Header from './components/Header'
 import Hero from './components/Hero'
 import AppsList from './components/AppsList'

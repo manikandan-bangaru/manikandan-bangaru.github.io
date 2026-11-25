@@ -1,3 +1,4 @@
+// Author: Magiban Technologies
 // Small inline icons, so no icon library ships with the page.
 export const PlayIcon = ({ size = 12 }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 3l15 9-15 9z" /></svg>

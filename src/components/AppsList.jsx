@@ -1,3 +1,4 @@
+// Author: Magiban Technologies
 import { useState } from 'react'
 import { apps, categories } from '../data/apps'
 import { PlayIcon, GalaxyIcon, AppleIcon, StarIcon } from './Icons'
